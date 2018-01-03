@@ -9,8 +9,6 @@ import homework.homework02.Employee;
 public class Main {
 
     public static void main(String[] args) {
-
-
-
+    // tu bedzie kod
     }
 }
