@@ -2,9 +2,9 @@ package homework.homework02;
 
 public class Person {
 
-    protected int pesel;
-    protected String name;
-    protected String surname;
+    private int pesel;
+    private String name;
+    private String surname;
 
     public Person(int pesel, String name, String surname) {
         this.pesel = pesel;
