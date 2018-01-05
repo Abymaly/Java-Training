@@ -1,6 +1,6 @@
 package homework.homework02;
 
-public class Student extends Person {
+public class Student {
     private Faculty faculty;
     private int semester;
     private Person person;
@@ -11,27 +11,27 @@ public class Student extends Person {
         this.person = person;
     }
 
-    public String getStudentName() {
+    public String getName() {
         return person.name;
     }
 
-    public void setStudentName(String name) {
+    public void setName(String name) {
         person.name = name;
     }
 
-    public String getStudentSurname() {
+    public String getSurname() {
         return person.surname;
     }
 
-    public void setStudentSurname(String surname) {
+    public void setSurname(String surname) {
         person.surname = surname;
     }
 
-    public int getStudentPesel() {
+    public int getPesel() {
         return person.pesel;
     }
 
-    public void setStudentPesel(int pesel) {
+    public void setPesel(int pesel) {
         person.pesel = pesel;
     }
 
@@ -43,10 +43,9 @@ public class Student extends Person {
         this.semester = semester;
     }
 
-    public String getFacultyName() {
+    public String getFaculty() {
         return faculty.getFacultyName();
     }
 
     //public void getInfo() {}
-
 }

@@ -12,8 +12,6 @@ public class Person {
         this.surname = surname;
     }
 
-    public Person () {}
-
     public String getName () {
         return name;
     }
@@ -21,6 +19,11 @@ public class Person {
     public String getSurname () {
         return surname;
     }
+
+    public int getPesel () {
+        return pesel;
+    }
+
 
     //public void getInfo() {}
 
