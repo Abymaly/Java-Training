@@ -16,7 +16,7 @@ public class Student {
     }
 
     public void setName(String name) {
-        person.name = name;
+        person.setName(name);
     }
 
     public String getSurname() {
@@ -24,7 +24,7 @@ public class Student {
     }
 
     public void setSurname(String surname) {
-        person.surname = surname;
+        person.setSurname(surname);
     }
 
     public int getPesel() {
@@ -32,7 +32,7 @@ public class Student {
     }
 
     public void setPesel(int pesel) {
-        person.pesel = pesel;
+        person.setPesel(pesel);
     }
 
     public int getSemester() {

@@ -24,6 +24,17 @@ public class Person {
         return pesel;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setPesel(int pesel) {
+        this.pesel = pesel;
+    }
 
     //public void getInfo() {}
 
