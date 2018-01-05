@@ -1,23 +1,38 @@
 package homework.homework02;
 
-public class Student extends Person{
-    protected Faculty faculty;
-    protected int semester;
-    protected Person person;
+public class Student extends Person {
+    private Faculty faculty;
+    private int semester;
+    private Person person;
 
-    public Student(int pesel, String name, String surname, Faculty faculty, int semester, Person person) {
-        super(pesel, name, surname);
+    public Student(Faculty faculty, int semester, Person person) {
         this.faculty = faculty;
         this.semester = semester;
         this.person = person;
     }
 
-    public Faculty getFaculty() {
-        return faculty;
+    public String getStudentName() {
+        return person.name;
     }
 
-    public void setFaculty(Faculty faculty) {
-        this.faculty = faculty;
+    public void setStudentName(String name) {
+        person.name = name;
+    }
+
+    public String getStudentSurname() {
+        return person.surname;
+    }
+
+    public void setStudentSurname(String surname) {
+        person.surname = surname;
+    }
+
+    public int getStudentPesel() {
+        return person.pesel;
+    }
+
+    public void setStudentPesel(int pesel) {
+        person.pesel = pesel;
     }
 
     public int getSemester() {
@@ -28,12 +43,8 @@ public class Student extends Person{
         this.semester = semester;
     }
 
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
+    public String getFacultyName() {
+        return faculty.getFacultyName();
     }
 
     //public void getInfo() {}
