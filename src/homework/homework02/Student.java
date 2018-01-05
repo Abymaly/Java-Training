@@ -43,7 +43,7 @@ public class Student {
         this.semester = semester;
     }
 
-    public String getFaculty() {
+    public String getFacultyName() {
         return faculty.getFacultyName();
     }
 
