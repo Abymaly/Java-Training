@@ -12,7 +12,7 @@ public class Student {
     }
 
     public String getName() {
-        return person.name;
+        return person.getName();
     }
 
     public void setName(String name) {
@@ -20,7 +20,7 @@ public class Student {
     }
 
     public String getSurname() {
-        return person.surname;
+        return person.getSurname();
     }
 
     public void setSurname(String surname) {
@@ -28,7 +28,7 @@ public class Student {
     }
 
     public int getPesel() {
-        return person.pesel;
+        return person.getPesel();
     }
 
     public void setPesel(int pesel) {
