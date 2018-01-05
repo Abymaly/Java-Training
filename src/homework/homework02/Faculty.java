@@ -1,6 +1,13 @@
 package homework.homework02;
 
 public class Faculty {
+
+    private String facultyName;
+
+    public Faculty(String facultyName) {
+        this.facultyName = facultyName;
+    }
+
     public String getFacultyName() {
         return facultyName;
     }
@@ -9,9 +16,4 @@ public class Faculty {
         this.facultyName = facultyName;
     }
 
-    private String facultyName;
-
-    public Faculty (String facultyName) {
-        this.facultyName = facultyName;
-    }
 }

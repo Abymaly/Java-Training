@@ -1,8 +1,13 @@
 package homework.homework02;
 
 public class Instructor extends Employee{
+    protected String title;
+    protected Person person;
+    protected Salary salary;
 
-    private String title;
+    public Instructor(int pesel, String name, String surname, Salary salary, Person person) {
+        super(pesel, name, surname, salary, person);
+    }
 
     public String getTitle() {
         return title;
@@ -12,15 +17,25 @@ public class Instructor extends Employee{
         this.title = title;
     }
 
-
-    public Instructor (int pesel, String name, String surname, double salary, String title) {
-        super (pesel, name, surname, salary);
-        this.title = title;
+    @Override
+    public Person getPerson() {
+        return person;
     }
 
-    public void instructorInfo() {
-        super.employeeInfo();
-        System.out.println("title: " + title);
+    @Override
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
+    @Override
+    public Salary getSalary() {
+        return salary;
+    }
+
+    @Override
+    public void setSalary(Salary salary) {
+        this.salary = salary;
+    }
+
+    //public void getInfo() {}
 }
