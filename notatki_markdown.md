@@ -7,13 +7,19 @@ Markdown (tak samo) Ascii Doc służy do rozdzielenia warstwy treści od prezent
 ## nagłówek 2
 ### następny nagłówek
 
-"=" w linijce niżej daje wyróżnienie poprzedniej linijki
+"=" wyróżnienie poprzedniej linijki
 =
+
 ujęte w "**" **będzie bold**
 
 ujęte w "*" *będzie italic*
 
----------------
-czy linijkę wyżej jest linia?
+"---" zamienia na linię 
 
++ pkt 1. (zamiast + może być *, efekt będzie ten sam)
++ pkt 2.
++ pkt 3.
 
+1. pkt 1.
+2. pkt 2.
+3. pkt 3.
