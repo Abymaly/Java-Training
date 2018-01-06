@@ -52,7 +52,9 @@ A to jest kotek:
 ---
 ### O kodzie:
 A żeby wstawić kod (nie mylić z kot) to tak:
+
 "``` tu będzie kod```"
+
 żeby dobrze kolorował wg. języka, za pierwszymi ciapkami piszemy nazwę języka
 ```JAVA
     public Person(int pesel, String name, String surname) {
