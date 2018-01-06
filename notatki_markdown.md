@@ -49,4 +49,15 @@ A to jest kotek:
 
 ![orazek](https://royalcanin.pl/blog/wp-content/uploads/2016/12/176W-950x633.jpeg)
 
-
+---
+### O kodzie:
+A żeby wstawić kod (nie mylić z kot) to tak:
+"``` tu będzie kod```"
+żeby dobrze kolorował wg. języka, za pierwszymi ciapkami piszemy nazwę języka
+```JAVA
+    public Person(int pesel, String name, String surname) {
+        this.pesel = pesel;
+        this.name = name;
+        this.surname = surname;
+    }
+```
