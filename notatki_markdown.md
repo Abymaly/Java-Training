@@ -24,6 +24,8 @@ ujęte w "*" *będzie italic*
 2. pkt 2.
 3. pkt 3.
 
+---
+
 > to jest cytat
 >> a to jest cytat drugiego poziomu  
 żeby wyjść z trybu cytowania puta linia
