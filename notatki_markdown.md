@@ -28,12 +28,13 @@ ujęte w "*" *będzie italic*
 
 > to jest cytat
 >> a to jest cytat drugiego poziomu  
-żeby wyjść z trybu cytowania puta linia
+żeby wyjść z trybu cytowania pusta linia
 
 [link] A tutaj jest cheat sheet: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet . Jak czegoś tu nie ma, to nie istnieje
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| wiersz 1      | test | a to tekst |
+| wiersz 2      | test |   tu też tekst |
+| wiersz 3 | test      |    i tu też|
+
