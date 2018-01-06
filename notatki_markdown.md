@@ -30,8 +30,6 @@ ujęte w "*" *będzie italic*
 >> a to jest cytat drugiego poziomu  
 żeby wyjść z trybu cytowania pusta linia
 
-A [tutaj](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) jest cheat sheet. Jak czegoś tu nie ma, to nie istnieje
-
 ---
 ### Tabele:
 tabele są fajne
@@ -44,6 +42,10 @@ tabele są fajne
 | wiersz 3 | test      |    i tu też|
 
 : przy poziomej linii pod nagłówkami w tabeli załatwia środkowanie w tej kolumnie
+
+---
+
+A [tutaj](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) jest cheat sheet. Jak czegoś tu nie ma, to nie istnieje
 
 A to jest kotek:
 
