@@ -46,6 +46,4 @@ public class Student {
     public String getFacultyName() {
         return faculty.getFacultyName();
     }
-
-    //public void getInfo() {}
 }

@@ -35,7 +35,4 @@ public class Person {
     public void setPesel(int pesel) {
         this.pesel = pesel;
     }
-
-    //public void getInfo() {}
-
 }

@@ -36,6 +36,4 @@ public class Instructor extends Employee{
     public void setSalary(Salary salary) {
         this.salary = salary;
     }
-
-    //public void getInfo() {}
 }
