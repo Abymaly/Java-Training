@@ -72,5 +72,17 @@ b = 19
 > Prosty ternary jest prosty. Ale ternary z ternary w środku nawet dla mnie jest skomplikowany.
 @jbanaszczyk, 2018
 
+##Iterujemy
+No to iterujemy.
+Iteruje się pętlami.
+Pętle znamy i lubimy.
+Pętle:
++ for
 
-
+```Java
+for (int i = 0; i < 10; ++i) {
+// tu wykonuj kod
+};
+```
+Zwiększać ++i, a nia i++ -> nie słuchać Stack Overflow;
+Jeśli zwiększamy i++ to najpierw zapisujemy w pamięci poprzednią wartość a dopiero potem ją zwiększamy;
