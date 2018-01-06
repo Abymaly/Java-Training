@@ -35,19 +35,19 @@ Można używać, ale w Javie go nie lubią. Czy oni w ogóle coś lubią?
 ```JAVA
 switch (x) {
 case 0:
-// wykonaj kod
-//fall through  -> tu nie ma break, więc wykona się też case 1, ale dodawać komentarz
+    // wykonaj kod
+    //fall through  -> tu nie ma break, więc wykona się też case 1, ale dodawać komentarz
 case 1:
-// wykonaj kod;
-break;
+    // wykonaj kod;
+    break;
 case 2:
-// wykonaj kod;
-break;
+    // wykonaj kod;
+    break;
 case 3:
-// wykonaj kod;
-break;
+    // wykonaj kod;
+    break;
 default:
-// wykonaj kod;
+    // wykonaj kod;
 }
 ```
 
