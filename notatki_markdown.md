@@ -53,7 +53,7 @@ A to jest kotek:
 ### O kodzie:
 A żeby wstawić kod (nie mylić z kot) to tak:
 
-"``` tu będzie kod```"
+``` tu będzie kod ```
 
 żeby dobrze kolorował wg. języka, za pierwszymi ciapkami piszemy nazwę języka
 ```JAVA
@@ -63,3 +63,8 @@ A żeby wstawić kod (nie mylić z kot) to tak:
         this.surname = surname;
     }
 ```
+
+
+żeby pojedynczy kawałek w zdaniu robił jak kod, to trzeba go w pojedyncze `
+
+czyli tak: `tu jest kod`, a tu już nie
