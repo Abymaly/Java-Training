@@ -33,7 +33,7 @@ ujęte w "*" *będzie italic*
 [link] A tutaj jest cheat sheet: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet . Jak czegoś tu nie ma, to nie istnieje
 
 ---
-#### Tabele:
+### Tabele:
 tabele są fajne
 
 
@@ -44,3 +44,6 @@ tabele są fajne
 | wiersz 3 | test      |    i tu też|
 
 : przy poziomej linii pod nagłówkami w tabeli załatwia środkowanie w tej kolumnie
+
+![orazek] https://royalcanin.pl/blog/wp-content/uploads/2016/12/176W-950x633.jpeg
+
