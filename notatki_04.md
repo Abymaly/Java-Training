@@ -135,3 +135,34 @@ do {
 ```
 Wykonaj przynajmniej jeden obrót pętli, a potem sprawdzaj czy warunek jest spełniony.
 Czyli wykona pętlę przynjmniej raz,  dopiero potem będzie się zastanawiał co dalej.
+
+---
+**Break** przerywa pętlę. We wszystkich pętlach.
+```JAVA
+for (int i = 0; i < 10; ++i) {
+    if (i == 5) {
+    break
+    }
+};
+```
+jeśli i = 5 -> wychodzimy z pętli
+
+```JAVA
+while (true) {
+if (eof ()) {
+    break;
+    }
+}
+```
+
+---
+**Continue** pomija część ciała pętli. We wszystkich pętlach.
+```JAVA
+for (int i = 0; i < 10; ++i) {
+    //jakiś kod;
+    if (i == 5) {
+        continue;               -> z tego miejsca wraca do końca pętli;
+    }
+    //jakiś kod;
+};
+```
