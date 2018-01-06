@@ -30,3 +30,6 @@ ujęte w "*" *będzie italic*
 >> a to jest cytat drugiego poziomu  
 żeby wyjść z trybu cytowania puta linia
 
+[link] A tutaj jest cheat sheet: (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). . Jak czegoś tu nie ma, to nie istnieje
+
+
