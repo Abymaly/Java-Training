@@ -32,4 +32,8 @@ ujęte w "*" *będzie italic*
 
 [link] A tutaj jest cheat sheet: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet . Jak czegoś tu nie ma, to nie istnieje
 
-
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
