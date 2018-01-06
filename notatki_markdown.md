@@ -1,6 +1,6 @@
 Będzie o markdown:  
 
-Markdown (tak samo) Ascii Doc służy do rozdzielenia warstwy treści od prezentacji;
+Markdown (tak samo) Ascii Doc służy do rozdzielenia warstwy treści od prezentacji;  
 - służą do rozdzielenia warstwy treści od prezentacji;
 
 # nagłówek 
@@ -23,3 +23,8 @@ ujęte w "*" *będzie italic*
 1. pkt 1.
 2. pkt 2.
 3. pkt 3.
+
+> to jest cytat
+>> a to jest cytat drugiego poziomu  
+żeby wyjść z trybu cytowania puta linia
+
