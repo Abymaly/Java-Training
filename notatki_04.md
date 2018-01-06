@@ -69,15 +69,14 @@ b = 5;
 b = 19
 };
 ```
-> Prosty ternary jest prosty. Ale ternary z ternary w środku nawet dla mnie jest skomplikowany.
+> Prosty ternary jest prosty. Ale ternary z ternary w środku to już przegięcie.
 @jbanaszczyk, 2018
 
-##Iterujemy
+### Iterujemy
 No to iterujemy.
 Iteruje się pętlami.
 Pętle znamy i lubimy.
-Pętle:
-+ for
+**Pętla for**
 
 ```Java
 for (int i = 0; i < 10; ++i) {
@@ -86,3 +85,53 @@ for (int i = 0; i < 10; ++i) {
 ```
 Zwiększać ++i, a nia i++ -> nie słuchać Stack Overflow;
 Jeśli zwiększamy i++ to najpierw zapisujemy w pamięci poprzednią wartość a dopiero potem ją zwiększamy;
+
+
+```Java
+for (int i = 0; i < 10; ++i) {
+// tu wykonuj kod
+};
+```
+ten int i żyje do końca for
+
+```Java
+int i;
+for (i = 0; i < 10; ++i) {
+// tu wykonuj kod
+};
+```
+ten int i żyje do końca programu; na koniec i == 10 i taką wartość ma dalej.
+To może być potrzebne, ale jeśli nie zamierzamy używać potem i o zwiększonej wartości, to zajmuje pamięć zupełnie bez sensu.
+
+```JAVA
+ int [] myArray = {3, 5, 19};
+    for (int value : myArray) {
+        System.out.println(value);
+    }
+```
+To co jest w nawiasie po for to operator wskazujący na kolejne wartości w tablicy myArray.
+To nie jest iterator po wszystkich elementach w tablicy.
+value **nie jest indeksem kolejnym elementów tylko ich wartością!**
+
+>Iteratory są w każdym języku. Dzisiaj o iteratorach nie będzie.
+@jbanaszczyk, 2018
+
+**Pętla while**
+```JAVA
+int i = 0;
+while (i < 10) {            // dopóki (i<10) jest true wykonuj pętlę
+// jakiś kod
+++i;
+}
+```
+Wykonuj pętlę dopóki warunek jest prawdziwy.
+
+```JAVA
+int i = 0;
+do {
+// jakiś kod
+++i;
+} while (i < 10);           // dopóki (i<10) jest true wykonuj pętlę
+```
+Wykonaj przynajmniej jeden obrót pętli, a potem sprawdzaj czy warunek jest spełniony.
+Czyli wykona pętlę przynjmniej raz,  dopiero potem będzie się zastanawiał co dalej.
