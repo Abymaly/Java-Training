@@ -45,5 +45,6 @@ tabele są fajne
 
 : przy poziomej linii pod nagłówkami w tabeli załatwia środkowanie w tej kolumnie
 
-![orazek] https://royalcanin.pl/blog/wp-content/uploads/2016/12/176W-950x633.jpeg
+![orazek] (https://royalcanin.pl/blog/wp-content/uploads/2016/12/176W-950x633.jpeg)
+
 
