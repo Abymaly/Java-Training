@@ -1,19 +1,20 @@
 package homework.homework02;
 
-public class Faculty {
-
+public class Faculty implements iFaculty {
     private String facultyName;
 
     public Faculty(String facultyName) {
         this.facultyName = facultyName;
     }
 
-    public String getFacultyName() {
-        return facultyName;
-    }
-
+    @Override
     public void setFacultyName(String facultyName) {
         this.facultyName = facultyName;
+    }
+
+    @Override
+    public String getFacultyName() {
+        return facultyName;
     }
 
 }

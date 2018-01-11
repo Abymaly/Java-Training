@@ -1,38 +1,44 @@
 package homework.homework02;
 
-public class Person {
+public class Person implements iPerson {
 
+    private String firstName;
+    private String surName;
     private int pesel;
-    private String name;
-    private String surname;
 
-    public Person(int pesel, String name, String surname) {
+    public Person (String firstName, String surName, int pesel) {
+        this.firstName = firstName;
+        this.surName = surName;
         this.pesel = pesel;
-        this.name = name;
-        this.surname = surname;
     }
 
-    public String getName () {
-        return name;
+    @Override
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getSurname () {
-        return surname;
+    @Override
+    public void setSurName(String surName) {
+        this.surName = surName;
     }
 
-    public int getPesel () {
-        return pesel;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
+    @Override
     public void setPesel(int pesel) {
         this.pesel = pesel;
+    }
+
+    @Override
+    public String getFirstName() {
+        return firstName;
+    }
+
+    @Override
+    public String getSurName() {
+        return surName;
+    }
+
+    @Override
+    public int getPesel() {
+        return pesel;
     }
 }

@@ -1,48 +1,30 @@
 package homework.homework02;
 
-public class Student {
-    private Faculty faculty;
+public class Student implements iStudent, iFaculty {
     private int semester;
-    private Person person;
+    private Faculty faculty;
 
-    public Student(Faculty faculty, int semester, Person person) {
-        this.faculty = faculty;
+    public Student (int semester, Faculty faculty) {
         this.semester = semester;
-        this.person = person;
+        this.faculty = faculty;
     }
 
-    public String getName() {
-        return person.getName();
-    }
-
-    public void setName(String name) {
-        person.setName(name);
-    }
-
-    public String getSurname() {
-        return person.getSurname();
-    }
-
-    public void setSurname(String surname) {
-        person.setSurname(surname);
-    }
-
-    public int getPesel() {
-        return person.getPesel();
-    }
-
-    public void setPesel(int pesel) {
-        person.setPesel(pesel);
-    }
-
-    public int getSemester() {
-        return semester;
-    }
-
+    @Override
     public void setSemester(int semester) {
         this.semester = semester;
     }
 
+    @Override
+    public int getSemeseter() {
+        return semester;
+    }
+
+    @Override
+    public void setFacultyName(String facultyName) {
+        faculty.setFacultyName(facultyName);
+    }
+
+    @Override
     public String getFacultyName() {
         return faculty.getFacultyName();
     }
