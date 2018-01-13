@@ -1,15 +1,28 @@
 package homework;
 
-import homework.homework02.Person;
-import homework.homework02.Student;
-import homework.homework02.Instructor;
-import homework.homework02.Employee;
-import homework.homework02.Salary;
-import homework.homework02.Faculty ;
+import homework.homework02.*;
 
 public class Main {
 
     public static void main(String[] args) {
-    // jak sie napisze, to tu bedzie kod
+        Person a = new Person("A.", "P.", 007);
+        Person t = new Person("T.", "P.", 001);
+
+        Faculty f1 = new Faculty("knowledge abot nothing");
+        Faculty f2 = new Faculty("some knowledge");
+
+        Student st1 = new Student(2, f1);
+        Student st2 = new Student(1, f2);
+
+        Employee e1 = new Employee("mgr", 2400.0);
+        Employee e2 = new Employee("doc", 10000.0);
+
+        FatMan skinnyMan = new FatMan(a, st2, e2);
+
+        System.out.println(skinnyMan.getFacultyName());
+
+        skinnyMan.setFacultyName("test");
+
+        System.out.println(skinnyMan.getFacultyName());
     }
 }
