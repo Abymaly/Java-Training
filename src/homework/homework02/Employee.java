@@ -1,34 +1,31 @@
 package homework.homework02;
 
-import homework.homework02.Person;
+public class Employee implements IEmployee {
+    private String title;
+    private double salary;
 
-public class Employee extends Person {
-    protected Salary salary;
-    protected Person person;
-
-    public Employee(int pesel, String name, String surname, Salary salary, Person person) {
-        super(pesel, name, surname);
+    public Employee (String title, double salary) {
+        this.title = title;
         this.salary = salary;
-        this.person = person;
     }
 
-    public Salary getSalary() {
+    @Override
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(Salary salary) {
+    @Override
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
-    public Person getPerson() {
-        return person;
+    @Override
+    public void setTitle(String title) {
+        this.title = title;
     }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-    //public void getInfo() {}
-
 }
-
