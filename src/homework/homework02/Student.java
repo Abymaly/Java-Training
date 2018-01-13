@@ -1,6 +1,6 @@
 package homework.homework02;
 
-public class Student implements iStudent, iFaculty {
+public class Student implements IStudent, IFaculty {
     private int semester;
     private Faculty faculty;
 
@@ -15,7 +15,7 @@ public class Student implements iStudent, iFaculty {
     }
 
     @Override
-    public int getSemeseter() {
+    public int getSemester() {
         return semester;
     }
 

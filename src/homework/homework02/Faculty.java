@@ -1,6 +1,6 @@
 package homework.homework02;
 
-public class Faculty implements iFaculty {
+public class Faculty implements IFaculty {
     private String facultyName;
 
     public Faculty(String facultyName) {
@@ -16,5 +16,4 @@ public class Faculty implements iFaculty {
     public String getFacultyName() {
         return facultyName;
     }
-
 }

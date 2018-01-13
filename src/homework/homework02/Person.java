@@ -1,6 +1,6 @@
 package homework.homework02;
 
-public class Person implements iPerson {
+public class Person implements IPerson {
 
     private String firstName;
     private String surName;

@@ -1,6 +1,6 @@
 package homework.homework02;
 
-public class FatMan implements iEmployee, iStudent, iPerson {
+public class FatMan implements IEmployee, IStudent, IPerson, IFaculty {
     private Person person;
     private Student student;
     private Employee employee;
@@ -10,7 +10,6 @@ public class FatMan implements iEmployee, iStudent, iPerson {
         this.student = student;
         this.employee = employee;
     }
-
 
     @Override
     public double getSalary() {
@@ -68,7 +67,17 @@ public class FatMan implements iEmployee, iStudent, iPerson {
     }
 
     @Override
-    public int getSemeseter() {
-        return student.getSemeseter();
+    public int getSemester() {
+        return student.getSemester();
+    }
+
+    @Override
+    public void setFacultyName(String facultyName) {
+        student.setFacultyName(facultyName);
+    }
+
+    @Override
+    public String getFacultyName() {
+        return student.getFacultyName();
     }
 }

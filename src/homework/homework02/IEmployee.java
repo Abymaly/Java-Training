@@ -1,6 +1,6 @@
 package homework.homework02;
 
-public interface iEmployee {
+public interface IEmployee {
     double getSalary();
     String getTitle();
 

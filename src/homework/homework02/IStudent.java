@@ -1,7 +1,6 @@
 package homework.homework02;
 
-public interface iStudent {
+public interface IStudent {
     void setSemester (int semester);
-    int getSemeseter();
-
+    int getSemester();
 }

@@ -1,18 +1,13 @@
 package homework.homework02;
 
-import homework.homework02.Person;
-
-public class Employee implements iEmployee, iFaculty  {
+public class Employee implements IEmployee {
     private String title;
     private double salary;
-    private Faculty faculty;
 
-    public Employee (String title, double salary, Faculty faculty) {
+    public Employee (String title, double salary) {
         this.title = title;
         this.salary = salary;
-        this.faculty = faculty;
     }
-
 
     @Override
     public double getSalary() {
@@ -32,15 +27,5 @@ public class Employee implements iEmployee, iFaculty  {
     @Override
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    @Override
-    public void setFacultyName(String facultyName) {
-        faculty.setFacultyName(facultyName);
-    }
-
-    @Override
-    public String getFacultyName() {
-        return faculty.getFacultyName();
     }
 }
