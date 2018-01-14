@@ -40,8 +40,11 @@ Ale od wzorców można trochę odchodzić.
 
 **Kompozyt** - wzorczec strukturalny, czyli mówiący jak ma wyglądać organizacja klas i obiektów; sprawia, że kontruktor obiektów robić się bardzo długi i złożony;
 Jest to sprzeczne z koncepcją, że funkcja nie powinna mieć więcej niż 3 argumenty (no, może czasem przejdą 4). Inaczej testowalność idzie się gonić.
-Jeśli kommpozycja przerasta zdrowy rozsądek, to należy należy zdekomponować kompozycję do podkompyzji i skomponować od nowa.
+Jeśli kompozycja przerasta zdrowy rozsądek, to należy należy zdekomponować kompozycję do podkompyzji i skomponować od nowa.
 
+Kompozyt vs dziedziczenie:
+* _is a_ -> dziedziczenie (pies jest zwierzęciem;
+* _has a_ ->  kompozyt (pies ma zachowanie skakanie);
 
 ## Unit test
 Testowanie poszczególnych jednostek w programie: klas i metod;
