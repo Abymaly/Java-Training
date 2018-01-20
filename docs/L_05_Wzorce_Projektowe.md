@@ -65,6 +65,10 @@ Dobrze przyjętą praktyką jest pokrycie 80%.
 Absolutne minimum to 60%.
 W niektórych rozwiązaniach (telekomunikacja, systemy ratujące życie, itp.) musi być 100%.
 
+W unit testach można dodać adnotację Before i After
+@ Before -> co się wykonuje przed KAŻDYM testem zapisanym w tej klasie; tworzenie nowego obiektu na którym będzie odpalany test, itp;
+@ After -> co się wykonuje po KAŻDYM teście; zamykanie plików otwartych do testów, itd.
+
 Jest jeszcze **mockowanie** - tworzenie atrapy obiektu (_mock object_).
 Tego się używa do testów funkcjonalnych. Chociaż narzędzie do testów jednostkowych też da radę do testów funkcjonalnych.
 Więcej o tym będzie później.

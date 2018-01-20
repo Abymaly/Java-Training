@@ -78,9 +78,31 @@ if (x == y) {
 ```
 Nie zadziałało, bo na heap powstały dwie zapakowane (boxing) zmienne, których zawartość jet sobie równa, ale przez _==_ przekazujemy referencję a nie wartość.
 
-
 ---
+### immutable vs mutable
+`final int value = 3`
 
+```JAVA
+class Person {
+    String name;
+    String surName;
+    private final long pesel;
+
+    getPesel();
+    setPesel();  // no tak się nie da, pesel jest final! po to jest final, żeby go nie zmieniać;
+```
+
+Żeby teraz dało się zmienić pesel trzeba stworzyć nowy obiekt!
+```JAVA
+Person orgPerson = new Person("Jan", "Kowalski", 123);
+Person nextPerson = new Person(orgPerson.getName(), orgPerson.getSurName(), 456);
+```
+
+Stary obiekt, nigdzie nieużywany zostanie w końcu sprzątnięty przez garbage collector. Tworzyć nowe obiekty, nie przejmować się starymi.
+
+Zamiast getterów można tworzyć metody, które tworzą nowe obiekty na podstawie starych obiektów. Refleksja pozwala zawiesić na chwilę final i zmianić wartość. Można, ale posypie się cała optymalizacja. Nie robić.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### .toString()
 Do zmiennych dziedzczących z klasy (niegenerycznych)
 To metoda dziedzicząca po klasie _Object_, więc na generykach nie zadziała:
@@ -112,10 +134,19 @@ Dwa rodzaje porównań:
 public boolean equals (Object o) {
     if (this == o) return true; // tutaj porównujemy ==, bo prawdzamy czy wkazujemy na tą samą referencję. Jeśli referencja jest ta sama, to wskazujemy na ten sam obiekt o który pytamy (czyli wskauzjemy dwukrotnie na ten sam obiekt). No jeśli wskazujemy na to samo o co pytamy, to nie ma wyjścia, muszą być sobie równe
     if (!(o instanceof Person)) return false // instaneof -> to jest pytanie, czy mogę stworzyć jeden obiekt z drugiego. Jeśli nie mogę, to nie ma szansy, żeby były równe.
-    // możliwe, że raczej powinno być: if (this instanceof o) && (o instanceof thi) return true; pytanie czy relacja porównania powinna być zwrotna i symatryczna
+    // możliwe, że raczej powinno być: if ((this instanceof o) && (o instanceof this)) return true; pytanie czy relacja porównania powinna być zwrotna i symatryczna
     return name == person.name && // a tutaj porównujemy poszczególne pola obiektów;
-        Object.equal(surName, person.surName) &&
-        Object.equal(pesel, person.pesel);
+        Object.equals(surName, person.surName) &&
+        Object.equals(pesel, person.pesel);
 }
 ```
 
+---
+
+`! (a && b) == (!a || !b)`
+
+doczytać:
+- hash;
+- porównywanie przez hash;
+- notifikacja;
+- refleksja;
