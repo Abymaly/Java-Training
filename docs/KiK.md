@@ -19,12 +19,9 @@ _view - controller_ : nie ma żadnego połączenia; gracz ma myszkę, widok ma m
 _model - controller_ : połączenie w jedną stronę (cotroller -> model);
 _view - model_ : połączenie w obie strony; (view <-> model); ktoś (może być model) powinien poinformować widok o zmianach w modelu; jest jakiś zewnętrzyn trigger który wyzwala _zdarzyło się coś_. Może to być controller, może to być model.
 
----
+------------------------------------
 
-Enum - typ wyliczeniowy, która ma tyle zmiennych ile wypiszemy
-`enum XO {YES, NO, EMPTY}`
-
-3 klasy:
+**3 klasy:**
 
 **Model:**
 + enum XO {YES, NO, EMPTY} -> tablica zmiennych typu enum;

@@ -27,7 +27,6 @@ Ktoś kiedyś wymyślił, że są zasady których warto trzymać się w określo
 Wzorce to gotowe rozwiązania problemów projektowych. To nie są algorytmy.
 Algorytmy są realizacją wymagań funkcjonalnych. Są czymś zupełnie innym niż wzorce.
 
-
 Wzorce projektowe - jak coś robić, co się zyska, a co się straci.
 Uwaga - są też **antywzorce**. Wyglądają dokładnie tak samo jak wzorce, ale gdzieś mają informację, żeby nie używać.
 
