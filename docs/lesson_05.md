@@ -24,12 +24,17 @@ Przetwrzanie step-by-step vs przetwarzanie równoległe;
 ### Wzorce projektowe
 W zasadzie nie występują nigdzie oprócz informatyki.
 Ktoś kiedyś wymyślił, że są zasady których warto trzymać się w określonych sytuacjach.
+Wzorce to gotowe rozwiązania problemów projektowych. To nie są algorytmy.
+Algorytmy są realizacją wymagań funkcjonalnych. Są czymś zupełnie innym niż wzorce.
+
 
 Wzorce projektowe - jak coś robić, co się zyska, a co się straci.
 Uwaga - są też **antywzorce**. Wyglądają dokładnie tak samo jak wzorce, ale gdzieś mają informację, żeby nie używać.
 
 Ogarnij wymagania niefunkcjonalne, potem wybieraj wzorzec który do nich pasuje i leć z kodem.
 Ale od wzorców można trochę odchodzić.
+
+Ważniejsze jest, żeby program był napisany dobrze ale nie działał, niż żeby działał napisany źle - jeśli nie działa a jest dobrze napisany, to można go doprowadzić do stanu używalności.
 
 ---
 

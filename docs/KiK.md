@@ -10,14 +10,14 @@ Ma być prosty, ale nie naiwny -> rozdzielić dane od wykonywania operacji;
 Są różne warianty (pasywny, aktywny...). Zrobimy najprostsze.
 
 **Składowe MVC:**
-+ **_Controller_** - coś co wydaje polecenia;
-+ **_Model_** - coś co trzyma dane;
-+ **_View_** - coś co pokazuje, obserwator;
++ **_Controller_** - coś co wydaje polecenia; może być więcej niż jeden (cotroller player 1, player 2, itp.);
++ **_Model_** - coś co trzyma dane; trudno powiedzieć ile może być (to zależy), ale warto się zastanowić czy więcej niż jeden nie rodzi problemów z architekturą;
++ **_View_** - coś co pokazuje, obserwator; może być więcej niż jeden;
 
 Generalnie chodzi o to, żeby rozdzielić najwięcej elementów.
 _view - controller_ : nie ma żadnego połączenia; gracz ma myszkę, widok ma monitor.
 _model - controller_ : połączenie w jedną stronę (cotroller -> model);
-_view - model_ : połączenie w obie strony; (view <-> model);
+_view - model_ : połączenie w obie strony; (view <-> model); ktoś (może być model) powinien poinformować widok o zmianach w modelu; jest jakiś zewnętrzyn trigger który wyzwala _zdarzyło się coś_. Może to być controller, może to być model.
 
 ---
 
