@@ -100,3 +100,22 @@ System.out.println(x + y);      // tutaj najpierw zrobił niejawnie x.getValue()
 System.out.println(x.toString() + y.toString());
     // wydrukuje 154
 ```
+
+---
+### Jak porównywać obiekty
+
+Dwa rodzaje porównań:
+- _shallow_ (płytkie): mamy dwa czarne koty. Oba są czarne i są kotami, więc są takie sam.
+- _deep_ (głębokie): mamy dwa czarne koty. Oba są czarne i są kotami, ale jeden jest wredny, a drugiemu upierdoliło łapkę. Są różne.
+
+```JAVA
+public boolean equals (Object o) {
+    if (this == o) return true; // tutaj porównujemy ==, bo prawdzamy czy wkazujemy na tą samą referencję. Jeśli referencja jest ta sama, to wskazujemy na ten sam obiekt o który pytamy (czyli wskauzjemy dwukrotnie na ten sam obiekt). No jeśli wskazujemy na to samo o co pytamy, to nie ma wyjścia, muszą być sobie równe
+    if (!(o instanceof Person)) return false // instaneof -> to jest pytanie, czy mogę stworzyć jeden obiekt z drugiego. Jeśli nie mogę, to nie ma szansy, żeby były równe.
+    // możliwe, że raczej powinno być: if (this instanceof o) && (o instanceof thi) return true; pytanie czy relacja porównania powinna być zwrotna i symatryczna
+    return name == person.name && // a tutaj porównujemy poszczególne pola obiektów;
+        Object.equal(surName, person.surName) &&
+        Object.equal(pesel, person.pesel);
+}
+```
+
