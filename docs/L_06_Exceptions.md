@@ -68,3 +68,8 @@ if (pesel <0) {
 }
 }
 ```
+
+**Konstruktor** może rzucić wyjątek! To jest jedyny sposób, żeby konstruktor powiedział, że dane które zostały do niego wprowadzone są błędne i niezgodne z deklaracją konstruktora. Można wychodzić z konstruktora wyjątkami, nie bać się tego.
+
+Doczytać:
+- finally
