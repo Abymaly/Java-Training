@@ -1,11 +1,11 @@
-package KiK;
+package TicTacToe;
 
 public class Model {
 
     final int size = 3;
     int x = 0;
     int y = 0;
-    enum XO {YES, NO, EMPTY};
+    enum XO {TIC, TAC, EMPTY};
 
     XO[][] board;
 

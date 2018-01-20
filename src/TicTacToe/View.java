@@ -1,4 +1,4 @@
-package KiK;
+package TicTacToe;
 
 public class View {
 
