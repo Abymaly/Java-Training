@@ -53,3 +53,6 @@ Po to mamy enuma żeby mieć stałe.
 
 
 -------------------------------------
+
+Konwencja w enumie: tylko wielkie litery bez spacji;
+To koncepcja zaporzyczona z C, że zmienne niezmienne zapisujemy wielkimi. Zostało tylko w enumie;

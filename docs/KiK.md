@@ -52,3 +52,7 @@ Doczytać:
 
 Zrobić klasy i zaproponować maina który konstruuje obiekty;
 Jak coś ma coś zwracać to neich zwraca jakiś false, albo null - bez unit testów.
+
+---
+W modelu jest metoda .setData, która zmienia dane w modelu.
+Model przekazuje wiadomość do widoku.

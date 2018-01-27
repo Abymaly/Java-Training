@@ -11,22 +11,22 @@ class NewCoord extends Coord {
 }
 ```
 
-Nie generyczne typy zmiennych są klasami, więc z wielkiej!
+Obiektowe typy zmiennych są klasami, więc z wielkiej!
 `String token = "Hello!";`
 
-Generyczne typy zmiennych: z małej!
+Proste typy zmiennych: z małej!
 int, long, double, float, char, boolean
 
 Każda klasa reprezentującą klasę jest zrobiona dokładnie tak samo:
 ```JAVA
 class Long {
-    private final long value;           // tutaj jest wewnętrzny, generyczny long
+    private final long value;           // tutaj jest wewnętrzny, prosty long
     public getLong;                      // (albo getValue, nie ma znaczenia) zwracającą wartość ze środk;
     public setLong;
 }
 ```
 
-Używanie zmiennych niegenerycznych jest budowane w język. Kompilator działa na zasadzie:
+Używanie zmiennych obiektowe jest budowane w język. Kompilator działa na zasadzie:
 ```
 Long l = 123L;
     l.setValue(123);
@@ -40,17 +40,20 @@ long a = newL;                      // to jest unboxing
     a = newL.getValue();
 ```
 
-_boxing_ i _unboxing_ jest kolejną operacją którą trzeba wykonać. Dlatego w niektórych sytuacjach nie używać zmiennych niegenerycznej.
+_boxing_ i _unboxing_ jest kolejną operacją którą trzeba wykonać. Dlatego w niektórych sytuacjach nie używać zmiennych obiektowych.
 - w pętli obowiązkowo mały int, po co za każdym razem tworzyć nowy obiekt i go rozpakowywać.
 - w pozostałych miejscach w zasadzie jeden pies, chociaż programiści javy lubią obiekty;
+- w kontenerach używamy dużych Integerów:
+    - int[17] x - tutaj mały int bo to tablica;
+    - new Array <Integer> - tutaj duży Integer, bo kontenery przechowują obiekty;
 
-**Zmienne niegeneryczne (czyli klasy) mogą mieć w sobie _null_!**
+**Zmienne obiektowe (czyli klasy) mogą mieć w sobie _null_!**
 Mały int może mieć w sobie 0, duży Integer może być 0 albo null.
 _Boolean_ może mieć trzy wartości: _true_, _false_, _null_. A raczej jest _null_ albo _not null_. A jeśli jest _not null_ to może być _true_ albo _false_.
 _boolean_ może być tylko _true_ albo _false_;
 
-Zmienne generyczne porównujemy przez _==_
-Zmienne z klas porównujemy metodami, nie przez _==_. Czasami się uda, ale nie zawsze.
+Zmienne proste porównujemy przez _==_
+Zmienne obiektowe porównujemy metodami, nie przez _==_. Czasami się uda, ale nie zawsze.
 
 ```JAVA
 Long a1;
@@ -66,6 +69,11 @@ if (b1 == b2) {
 }
 ```
 
+Deklaracja nowych zmiennych. Oba zadziałają, ale pierwszy lepszy: W nim kompilator ma szansę na optymalizację - pobiera dane z puli już wstępnie utworoznych obiektów.
+```JAVA
+Long x = 7L;
+Long y = new Long(7L)
+```
 
 Tak nie robimy:
 ```JAVA
@@ -104,8 +112,8 @@ Zamiast getterów można tworzyć metody, które tworzą nowe obiekty na podstaw
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### .toString()
-Do zmiennych dziedzczących z klasy (niegenerycznych)
-To metoda dziedzicząca po klasie _Object_, więc na generykach nie zadziała:
+Do zmiennych dziedzczących z klasy (obiektowych)
+To metoda dziedzicząca po klasie _Object_, więc na prostych zmiennych nie zadziała:
 
 ```JAVA
 int x = 1500;

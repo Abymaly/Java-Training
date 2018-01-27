@@ -32,7 +32,7 @@ catch ( ) {
 }
 ```
 
-Kolejność pułapek jest istotna. Łapie się catch który pasuje typem do throw, ale to który z pasujących catch się złapie zależy od kolejności ich zadeklarowania;
+Kolejność pułapek jest istotna. Łapie się pierwszye catch który pasuje typem do throw, ale to który z pasujących catch się złapie zależy od kolejności ich zadeklarowania;
 
 
 ```JAVA
@@ -71,5 +71,28 @@ if (pesel <0) {
 
 **Konstruktor** może rzucić wyjątek! To jest jedyny sposób, żeby konstruktor powiedział, że dane które zostały do niego wprowadzone są błędne i niezgodne z deklaracją konstruktora. Można wychodzić z konstruktora wyjątkami, nie bać się tego.
 
-Doczytać:
-- finally
+### finally
+
+```JAVA
+try {
+} catch (...) {
+} finally {
+}
+```
+Finally - to coś co się wykona zawsze. Nie ważne czy był catch który pasuje, czy zaszła potrzeba złapania wyjątku. Służy do zarządzania zasobami (w zasadzie chodzi o zamykanie plików).
+Nie wiadomo kiedy wykona się finally. Odpali się na pewno przy najbliższym garbage collector.
+Nigdy nie ma gwarancji, że metoda finally się w ogóle odpali - garbage collector odpala się kiedy kończy się pamięć, a nie zamyka program. Program może się skończyć zanim skończy się pamięć, więc wtedy się nie odpali sekcja finally.
+Generalnie nie używać. Programistom Javy jest wstyd za `finally`.
+
+### try / catch z zasobami (_with resources_)
+
+```JAVA
+File imlpements closeable // (plik musi implementować interfejs zamykalny), który musi zawierać w sobie jedną anstrakcyjnę metodę: `void close()`
+File f;
+try (f){
+} catch (...) {
+} finally {
+}
+```
+Oznacza to na zakończenie, odpali się metoda close (był implement, więc ta metoda istnieje).
+Ochronie podlega obiekt f, który na koniec zostanie zamknięty.

@@ -1,5 +1,4 @@
-## Wzorce projektowe
-#### Dobre praktyki i wymagania niefunkcjonalne
+## Dobre praktyki i wymagania niefunkcjonalne
 
 >"Mogę narysować ludzika. Ma głowę, rączki, nóżki i co tam potrzeba. Ale tam pod spodem zabrakło magicznego: _jak się to kurwa rysuje?!_"
 
