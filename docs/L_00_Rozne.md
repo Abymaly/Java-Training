@@ -7,3 +7,46 @@ Fluent API - żeby metoda zwracała coś tego samego typu co dane wyjściowe. Cz
 
 Po to są settery i gettery, żeby można było przejąć kontrolę nad zmianą. I uchwycić dokładnie moment zmiany.
 Jeśli w konstruktorze na sztywno przypisujemy wartości, to wtedy nie przechodzimy przez settera. Nie ma kontroli nad tym co się dzieje. Może warto by było używać setterów też w konstruktorze?
+
+
+
+### Przekazywanie przez wartość vs przez referencję
++ doczytać!
+
+```JAVA
+Class ABC
+this.a = a   // to powoduje podstawienie wartości przez referencję; zmieniamy wartość podstawowego obiektu;
+this a = newA (A) // w tym miejscu main posiada oryginał a klasa ABC posiada kopię, nie odwołują się do tego samego obiektu;
+```
+
+Do konstruktora należy przkazywać obiekty utworozne na zewnątrz, a nie tworzyć je w konstruktorze!
+**W konstruktorze nie używać new() wbec komponentów!** W konstruktorze nie tworzymy nowej instancji;
+
+**Tak jest dobrze:**
+```JAVA
+Class Car {
+
+private Wheel wheel;
+Car ( Wheel wheel) {
+this.wheel = wheel;
+}
+
+wheel = new wheel();
+Car car = new car (... wheel)
+```
+
+**Tak nie robimy:**
+```JAVA
+Class Car {
+
+private Wheel wheel;
+Car ( Wheel wheel) {
+this.wheel = new wheel();
+}
+
+Car car = new car ()
+```
+
+Kontrolę nad komponentami ma mieć program główny, a nie obiekt.
+Za cykl życia obiektów odpowiada zewnętrze, obiekt się tylko z nich składa.
+To się nazywa **inversion of control**. To jest ważne.
