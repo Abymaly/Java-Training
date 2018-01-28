@@ -24,6 +24,7 @@ interface IPerson {
 
 Class Person implements IPerson
 ```
+
 Można stworzyć zmienną typu interface
 
 IPerson ip = new Person (...)
