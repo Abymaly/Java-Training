@@ -1,8 +1,17 @@
-### interface
+## Interfejsy (_interface_)
 
-Interface - zestaw metod bez ich implementacji (bez ciała).
+Interfejs - zestaw metod bez ich implementacji (bez ciała). Szkielet klas implementujących interfejs.
+- kontrakt co klasa implementująca ma robić, a nie instrukcja jak ma to robić.
+
 Właściwa implementacja metod zawartych w interfejsie znajduje się w klasie implementującej dany interfejs.
 
+Klasa implmentująca musi (!) implementować metody interfejsu.
+- może oprócz tego posiadać swoje metody specyficzne;
+- przydatna może być adnotacja _@Override_;
+- domyślnie wszystkie metody interfejsu są publcizne i abstrakcyjne;
+- metody interfejsu nie mogą być statyczne;
+
+Interfejs może dziedziczyć interfejs (nawet więcej niż jeden);
 
 ```JAVA
 Class Person
@@ -33,8 +42,9 @@ if (value1 == value2) {
 Niczego, co ma w sobie klasę nie porównujemy operatorem "==". To jest porównanie przez referencję. Więc czasem się uda (jeśli w mięczyczasie nie zmieni się adres w heap), ale kiedyś się nie uda.
 Obiekty klasy porównujemy przez wartość, metodami equals ((s1.equals(s2)). Metoda equals jest zdefiniowana w Object, więc jest dziedziczona przez wszystkie klasy (czasem być może trzeba będzie zrobić override)
 
+---
 
-### Klasy abstrakcyjne (_abstract classes_)
+## Klasy abstrakcyjne (_abstract classes_)
 
 Klasa abstrakcyjne to taki trochę interfejs. Służy do tworzenia abstrakcji.
 
