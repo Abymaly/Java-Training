@@ -168,3 +168,14 @@ Stringi implementują:
 - Serializable;
 - Comparable;
 - CharSequence;
+
+
+---
+
+Interfejs generyczny, czyli parametryzowany po typie T:
+```JAVA
+@FunctionalInterface
+public interface ICalculator<T> {
+    T calc(T a, T b);
+}
+```

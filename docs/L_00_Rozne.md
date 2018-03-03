@@ -63,3 +63,13 @@ if (value1 == value2) {
 Niczego, co ma w sobie klasę nie porównujemy operatorem "==". To jest porównanie przez referencję. Więc czasem się uda (jeśli w mięczyczasie nie zmieni się adres w heap), ale kiedyś się nie uda.
 Obiekty klasy porównujemy przez wartość, metodami equals ((s1.equals(s2)). Metoda equals jest zdefiniowana w Object, więc jest dziedziczona przez wszystkie klasy (czasem być może trzeba będzie zrobić override)
 
+---
+
+`System.out.println`
+- System: klasa;
+- out: metoda;
+- println: zmienna;
+
+---
+Deklaracja funkcji ze zmiennną liczbą argumentów:
+`fun (Integer ... arg)` -> to oznacza od zera do dowlonie zmiennych typów Integer. To jest tłumaczone jako tablica arg Integerów (`[]arg`)
