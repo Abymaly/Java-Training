@@ -144,12 +144,23 @@ Stream<Integer> stream = Stream.iterate(3, n -> n+2);
         .forEach(System.out::println);
 ```
 
+Zapisywanie ze strumienia do tablicy:
+```JAVA
+Stream<Integer> stream = Stream.iterate(3, n -> n + 2);
+
+List<Integer> list = new LinkedList<>(stream
+    .limit(10)
+    .collect(Collectors.toList()));
+    System.out.println(list.toString());
+```
+
+**Strumienie można przetwarzać równolegle!** To jest włanie MapReduce!
 
 **Technologia Hadoop:**
 - platforma do rozproszonego składowania i przetwarzania wielkich zbiorów danych;
 - witamy w XXI w, gdzie w każdej chwili można kupić tysiąc serwerów i ich używać;
 - założenie: awarie sprzętowe się zdarzają;
-- bazuje na algorytmie MapReduce (zaimplementowany np. też w JS);
+- bazuje na algorytmie **MapReduce** (zaimplementowany np. też w JS);
     - technologia do równoległego przetwarzania dużych zbiorów danych;
     - dzieli operacje na dwa kroki:
     - _map_ - pobranie danych z wejścia, podział na mniejsze problemy i przesłanie do węzłów roboczych; każdy węzeł roboczy może podzielić podproblem na kolejne podproblemy i przesłać je dalej;
