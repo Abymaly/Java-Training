@@ -133,7 +133,7 @@ IntStream - strumień Integerów. Tylko do typów prostych. To tworzy strumień 
 
 `IntStream stream = IntStream.range(2, 10);`
 
-Generalnie strumienie to są koprocedury:
+Generalnie strumienie to są **koprocedury**:
 - koprocedury - wykonywane gdzieś w środku, a potem robią YELD;
 - zatrzymaj moje funkcjonowanie w tym stanie i jak wrócimy to do tego stanu;
 
