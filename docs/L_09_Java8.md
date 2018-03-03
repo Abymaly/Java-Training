@@ -75,7 +75,7 @@ public void list_remove() {
 
 ---
 
-### Imterfejs funkcjnalny
+### Interfejs funkcjnalny
 
 Metody na funkcjch które zwracają funkcje:
 ```JAVA
