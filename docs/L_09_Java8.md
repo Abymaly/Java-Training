@@ -13,8 +13,6 @@ W javie są funkcje i lambdy
 
 ---
 
----
-
 ### Lambda
 
 interfejs _Predicate_ (predykat)
@@ -92,6 +90,7 @@ Function<Integer, Integer> total = add5.andThen(minus15);
 - andComparing;
 - comparator można sładać z comparatorów: compareYear.andComparing.compareMotnh.andComapring.compareDay
 
+---
 
 ### Strumienie
 
@@ -108,6 +107,7 @@ Do każdej kolekcji dopisano opcję przeniesienia na strumień.
 Strumienie są wolniejsze niż niestrumienie.
 > Nie przejmujemy się tym, tylko jak coś jest 5 razy wolniejsze, to stawiamy 5 razy silniejszy komputer
 
+
 Strumienie tworzy się na kilka sposobów, można na przykład tak: `Stream<Integer> stream = new ArrayList<>(Arrays.asList(1, 5, 8, 2, 6)).stream();`
 
 Albo tak: `Stream<Integer> stream02 = Stream.of(1, 5, 8, 2, 6);`
@@ -122,12 +122,12 @@ Funkcje są obiektami, więc mamy dostęp do metody która siedzi w środku. Wi�
 
 `::` oznacza: wywołaj mi metodę z obiektu, zupełnie jak lambdę, a argumenty to się domyśli jakie mają być (takie auto)
 
-- *_supplier_* - ciągnie skądś (z dysku, pliku, bazy danych) i wkłada do strumienia
-- *_consument_* - czyta ze strumienia i wkłada dokądś (na dysk, do pliku, do bazy danych); bierze dane, produkuje voida;
-- *_mapper_* - dostaje elementy ze strumienia i produkuje elementy do innego strumienia; `stream.map(a -> "<<< " + a.toString(a) + " >>>")`
-- *_filter_* - filtruj nie spełniające warunku; `stream.filter((a) -> a > 3)`
-- *_sorted_* - `stream.sorted()`, defaultowo rosnąco, można według jakiegoś comparatora;
-- *_limit_* - wprowadza bardzo silnego breaka, po limicie nic nie ma, `stream.limit(3)`
+- **_supplier_** - ciągnie skądś (z dysku, pliku, bazy danych) i wkłada do strumienia
+- **_consument_** - czyta ze strumienia i wkłada dokądś (na dysk, do pliku, do bazy danych); bierze dane, produkuje voida;
+- **_mapper_** - dostaje elementy ze strumienia i produkuje elementy do innego strumienia; `stream.map(a -> "<<< " + a.toString(a) + " >>>")`
+- **_filter_** - filtruj nie spełniające warunku; `stream.filter((a) -> a > 3)`
+- **_sorted_** - `stream.sorted()`, defaultowo rosnąco, można według jakiegoś comparatora;
+- **_limit_** - wprowadza bardzo silnego breaka, po limicie nic nie ma, `stream.limit(3)`
 
 IntStream - strumień Integerów. Tylko do typów prostych. To tworzy strumień Integerów w zakresie:
 
