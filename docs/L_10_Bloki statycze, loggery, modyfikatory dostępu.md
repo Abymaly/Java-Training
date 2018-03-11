@@ -5,8 +5,6 @@
 `int q2 = 100` - to jest deklaracja i definicja zmiennej z kawałkiem run time;
 
 
-**Blok inicjalizujący** - wykona się przed konstruktorem;
-
 Tak się nie wykona:
 ```JAVA
 public class TestClass {
@@ -33,17 +31,18 @@ public class TestClass {
 ```
 Żeby się wykonało, to co ma się wykonać przed konstruktorem trzeba wziąć w klamerki. To się nazywa blok inicjalizujący.
 
-**Blok statyczny**
+**Blok statyczny:**
 - należy do klasy;
 - wykona się tylko raz, w przypadku pierwszego odwołania się do klasy;
 - z bloku statycznego możemy odwoływać się tylko do statycznych pól oraz metod;
 
-**Blok inicjalizujący (instancyjny)**
+**Blok inicjalizujący (instancyjny):**
 - należy do obiektu;
 - wykona się w ramach każdego new, jako pierwsze;
-- konstruktor nadklasy -> blok inicjalizujący podklasy -> konstruktor podklasy;
+- wykona się przed konstruktorem:
+    - konstruktor nadklasy -> blok inicjalizujący podklasy -> konstruktor podklasy;
 
-Wszystko co jest static należy do klasy, wszystko co nie jest static należy do każdego obiektu klasy.
+**Wszystko co jest static należy do klasy, wszystko co nie jest static należy do każdego obiektu klasy.**
 
 ---
 
@@ -63,7 +62,7 @@ Zmienne nie powinny być publiczne. Używamy protected i private, udostępniamy 
     - używać w testach, poza tym lepiej nie tykać;
 - _Private_ - tylko obiekty klasy;
 
-`Final` - żeby uniemożliwić przedefiniowanie metody, przy dziedziczeniu;
+`Final` - żeby uniemożliwić przedefiniowanie metody (przy dziedziczeniu;)
 
 **Mechanizm refleksji** - klasa może się dowiedzieć o tym jak jest skonstuowana sama ona, lub dowolna inna klasa
 - również o tym czy inne pola są private i final;
@@ -82,7 +81,7 @@ Zmienne nie powinny być publiczne. Używamy protected i private, udostępniamy 
 - wykorzystanie `System.out` do sprawdzenia aktualnej wartości zmiennych i stanu w którym znajduje się aplikacja jest bez sensu;
 - sprawę rozwiązano loggerami.
 
-Logi - do szegoko rozumianego przepływu informacji.
+Logi - do szeroko rozumianego przepływu informacji.
 - do zapisu aktualnej wartości poszczególnych zmiennych i obiektów;
 - do komunikatów o błędach;
 - do informacji o zdarzeniach mających miejsce w trakcie działania aplikacji;
@@ -103,8 +102,6 @@ Loggery mają priorytety (poziomy logowania). W różnych wariantach, zwykle są
 - w niektórych bibliotekach (Log4J) można definiować własne poziomy
 
 Loguje wybrany poziom i wszystkie wzwyż.
-
-Podejście: _configuration over implementation_ - zróbmy wszystko co trzeba, potem będziemy robić, żeby było dobrze.
 
 ```JAVA
 import org.junit.Test;
@@ -149,8 +146,7 @@ public class Logowanie {
 - rozdzielenie programu na części w jak największym stopniu niezwiązane funkcjonalnie;
 - jak wszystko inne wymyślono w Xerox ;)
 
-**AspectJ** - aspektowe rozszerzenie Javy
+**AspectJ** - aspektowe rozszerzenie Javy:
 - generalnie w Javie podstawową jeddnostką jest klasa;
 - AspectJ wprowadza nową jednstkę - aspekt;
     - aspekt opisuje zagadnienie które przecina więcej niż jedną klasę;
-

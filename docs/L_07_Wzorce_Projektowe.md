@@ -177,6 +177,8 @@ Implementacja:
 - enum stanów (jakie sąstany) - definicja węzłów grafów;
 - tablica przejść (jakie są akcje i jakie są skutki) - definicja krawędzi grafów; tablica dwuwymiarowa;
 
+Podejście: _configuration over implementation_ - zróbmy wszystko co trzeba, potem będziemy robić, żeby było dobrze.
 
+Rozdziela się kostrukcje od detali pliku (może być osobny plik .xml)
 
 _Maszyna Turinga_ - coś co potrafi liczyć i w trakcie liczenia podejmować decyzję na podstawie tego co policzyło. Nie jest maszyną stanów skończonych
