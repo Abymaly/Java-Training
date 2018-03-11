@@ -81,6 +81,8 @@ Do programowania wielowątkowego są zupełnie inne kolekcje o innych nazwach i 
 
 **Zbiór** (_set_):
 
+Zbiory są rzeczy różnych. Włożenie drugiej takiej samej rzeczy nie spowoduje, że się pojawi.
+
 `Set <Integer> set = new HashSet<> ();`
 
 `new HashSet<>` -> `<>` na końcu to takie prymitywne auto; na początku jest Integer, więc kompilator się domyśli, że pod drugiej stronie podstawienia też ma być Integer;

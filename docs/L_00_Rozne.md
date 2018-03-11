@@ -67,8 +67,8 @@ Obiekty klasy porównujemy przez wartość, metodami equals ((s1.equals(s2)). Me
 
 `System.out.println`
 - System: klasa;
-- out: metoda;
-- println: zmienna;
+- out: zmienna (obiekt);
+- println: metoda;
 
 ---
 Deklaracja funkcji ze zmiennną liczbą argumentów:

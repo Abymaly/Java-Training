@@ -7,7 +7,7 @@ Języki funkcjonalne:
 Java nie jest do końca językiem funkcjonalnym
 
 W c++ były funkcje, lambdy i funktory
--funktor to klasa w której są przeciążone argumenty;
+-funktor to klasa w której są przeciążone operatory;
 
 W javie są funkcje i lambdy
 
@@ -17,7 +17,9 @@ W javie są funkcje i lambdy
 
 interfejs _Predicate_ (predykat)
 
-adnotacja _@FunctionalInterface_ oznacza, że jest dokładnie jedna metoda w tej klasie
+adnotacja _@FunctionalInterface_ oznacza, że w tej klasie jest dokładnie jedna metoda abstrakcyjna. Mogą być w interfejsie inne metody, nieabstrakcyjne, a zaimplementowane jako `default`.
+
+Można ze wszystkim co implementuje predykat. Też z klasą albo klasą anonimową.
 
 strzałki `->` są tylko w lambdzie, łatwo poznać
 
@@ -88,7 +90,7 @@ Function<Integer, Integer> total = add5.andThen(minus15);
 
 **Interfejs comparator:**
 - andComparing;
-- comparator można sładać z comparatorów: compareYear.andComparing.compareMotnh.andComapring.compareDay
+- comparator można sładać z comparatorów: `compareYear.andComparing(compareMotnh).andComapring(compareDay)`
 
 ---
 
@@ -106,7 +108,6 @@ Do każdej kolekcji dopisano opcję przeniesienia na strumień.
 
 Strumienie są wolniejsze niż niestrumienie.
 > Nie przejmujemy się tym, tylko jak coś jest 5 razy wolniejsze, to stawiamy 5 razy silniejszy komputer
-
 
 Strumienie tworzy się na kilka sposobów, można na przykład tak: `Stream<Integer> stream = new ArrayList<>(Arrays.asList(1, 5, 8, 2, 6)).stream();`
 
@@ -129,7 +130,7 @@ Funkcje są obiektami, więc mamy dostęp do metody która siedzi w środku. Wi�
 - **_sorted_** - `stream.sorted()`, defaultowo rosnąco, można według jakiegoś comparatora;
 - **_limit_** - wprowadza bardzo silnego breaka, po limicie nic nie ma, `stream.limit(3)`
 
-IntStream - strumień Integerów. Tylko do typów prostych. To tworzy strumień Integerów w zakresie:
+IntStream - strumień intów. Tylko do typów prostych. To tworzy strumień Integerów w zakresie:
 
 `IntStream stream = IntStream.range(2, 10);`
 
@@ -154,7 +155,7 @@ List<Integer> list = new LinkedList<>(stream
     System.out.println(list.toString());
 ```
 
-**Strumienie można przetwarzać równolegle!** To jest włanie MapReduce!
+**Strumienie można przetwarzać równolegle!**
 
 **Technologia Hadoop:**
 - platforma do rozproszonego składowania i przetwarzania wielkich zbiorów danych;
@@ -163,8 +164,8 @@ List<Integer> list = new LinkedList<>(stream
 - bazuje na algorytmie **MapReduce** (zaimplementowany np. też w JS);
     - technologia do równoległego przetwarzania dużych zbiorów danych;
     - dzieli operacje na dwa kroki:
-    - _map_ - pobranie danych z wejścia, podział na mniejsze problemy i przesłanie do węzłów roboczych; każdy węzeł roboczy może podzielić podproblem na kolejne podproblemy i przesłać je dalej;
-    - _reduce_ - pobranie odpowiedzi na wszystkie podproblemy i złączenie je w jeden wynik (odpowiedź na główny problem);
+    - _map_ - pobranie odpowiedzi na wszystkie podproblemy i złączenie je w jeden wynik (odpowiedź na główny problem);
+    - _reduce_ - pobranie danych z wejścia, podział na mniejsze problemy i przesłanie do węzłów roboczych; każdy węzeł roboczy może podzielić podproblem na kolejne podproblemy i przesłać je dalej;
     - zaleta: możliwość łatwego rozproszenia informacji;
 
 Strumienie pozwalają zaimplemenować Map Reduce
