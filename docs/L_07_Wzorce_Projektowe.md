@@ -37,7 +37,6 @@ Wtedy trzeba jeszcze zrobić konstruktor bezparametrowy:
     public Person () {}
 ```
 
-
 No i dodać:
 ```JAVA
     public static Person getPerson () {
@@ -62,6 +61,7 @@ public class FatMan {
 }
 ```
 
+---
 
 ### Wzorzec obserwator (_observer_)
 
@@ -140,6 +140,8 @@ Między obserwatorem i obiektem obserwowanym jest mediator protokołu.
 
 Mediator potrafi zbierać informacje.
 
+---
+
 ### Wytwórnie projektowe
 
 Wytwórnie są prostopadłę do builderów
@@ -163,3 +165,18 @@ if (what.equals ("B1") {
 ```
 Metoda create jest typu Base. Możemy tak zrobić bo B1 i B2 dziedziczą po Base. Czy obiekt może zostać utworzony.
 
+---
+
+### Maszyna stanów skończonych (_Finite State Machine_)
+
+Maszyna stanów skończonych - abstrakcyjny, matematyczny, iteracyjny model zachowania systemu dynamicznego, oparty na tablicy przejścia między stanami;
+
+Maszyna stanowa - są stany i zdefiniowane przejścia między konkretnymi stanami;
+
+Implementacja:
+- enum stanów (jakie sąstany) - definicja węzłów grafów;
+- tablica przejść (jakie są akcje i jakie są skutki) - definicja krawędzi grafów; tablica dwuwymiarowa;
+
+
+
+_Maszyna Turinga_ - coś co potrafi liczyć i w trakcie liczenia podejmować decyzję na podstawie tego co policzyło. Nie jest maszyną stanów skończonych

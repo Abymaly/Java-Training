@@ -12,7 +12,7 @@ Większość klas od razu podzielono na czytające (_reader_) i piszące (_write
 
 Do obsługi wyższego poziomu abstrakcji niż pliki są strumienie (_stream_), kanały (_channels_);
 
-YELD: Można utworzyć symulowany plik w pamięci, który jeden proces czyta a drugi proces pisze.
+_YELD_: Można utworzyć symulowany plik w pamięci, który jeden proces czyta a drugi proces pisze.
 
 Wszystkie można odczytywać, zapisywać i tworzyć.
 
@@ -98,6 +98,15 @@ Zbiory są rzeczy różnych. Włożenie drugiej takiej samej rzeczy nie spowoduj
 - _ArrayList_ - jak zwykła tablica, tylko można na niej użyć resize;
 - _LinkedList_ - każdy element zawiera adres w pamięci do kolejnego elementu;;
 - _Vector_ - nie używać!;
+
+**Mapa** (_map_):
+
+- większość map bazuje na funkcji heszującej;
+- mapy nie są ograniczone typami, zarówno indeksem jak i wartością może być cokolwiek - obiektem klasy, kolekcją, itd.;
+    - `Map<String, Person>`
+    - `Map<Person, List<Person>>`
+    - istotne jest tylko to, żeby funkcja heszująca `Perosn` działała sprawnie i zwracała różnej wartości;
+-
 
 ---
 

@@ -73,3 +73,6 @@ Obiekty klasy porównujemy przez wartość, metodami equals ((s1.equals(s2)). Me
 ---
 Deklaracja funkcji ze zmiennną liczbą argumentów:
 `fun (Integer ... arg)` -> to oznacza od zera do dowlonie zmiennych typów Integer. To jest tłumaczone jako tablica arg Integerów (`[]arg`)
+
+---
+Język domenowy - język opisu domeny opisujący to na czym się będzie pracowało;
