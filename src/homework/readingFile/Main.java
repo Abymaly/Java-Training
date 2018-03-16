@@ -33,10 +33,12 @@ public class Main {
             int actCount = 0;
 
             for (String oneWord : allLineWord) {
-                if (wordsCount.get(oneWord) == null) {
-                    actCount = 0;
+                if (oneWord.length() > 3) {
+                    if (wordsCount.get(oneWord) == null) {
+                        actCount = 0;
+                    }
+                    wordsCount.put(oneWord, ++actCount);
                 }
-                wordsCount.put(oneWord, ++actCount);
             }
 
             Set<Map.Entry<String, Integer>> entrySet = wordsCount.entrySet();
