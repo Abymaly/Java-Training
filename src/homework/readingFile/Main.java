@@ -21,6 +21,7 @@ public class Main {
 
             while ((txtLine = bufferedFileReader.readLine()) != null) {
                 allLine.append(txtLine + " ");
+                // TODO: usunąć . Ale przy użyciu metody remove() nie wczytuje wtedy w ogóle tekstu
             }
 
             String allLineStr = allLine.toString();
