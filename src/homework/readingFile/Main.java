@@ -20,22 +20,23 @@ public class Main {
             StringBuilder allLine = new StringBuilder();
 
             while ((txtLine = bufferedFileReader.readLine()) != null) {
-                allLine.append(txtLine + " ");
+                allLine.append(txtLine)
+                .append(" ");
                 // TODO: usunąć . Ale przy użyciu metody remove() nie wczytuje wtedy w ogóle tekstu
             }
 
             String allLineStr = allLine.toString();
-            String allLineStrTxt = allLineStr.replaceAll(",", "");
-            String allLineWord[] = allLineStrTxt.split(" ");
+            String allLineStrTxt = allLineStr.replaceAll(",", " ");
+            String [] allLineWord = allLineStrTxt.split(" ");
 
             Map<String, Integer> wordsCount = new HashMap<>();
             int actCount = 0;
 
-            for (String x : allLineWord) {
-                if (wordsCount.get(x) == null) {
+            for (String oneWord : allLineWord) {
+                if (wordsCount.get(oneWord) == null) {
                     actCount = 0;
                 }
-                wordsCount.put(x, ++actCount);
+                wordsCount.put(oneWord, ++actCount);
             }
 
             Set<Map.Entry<String, Integer>> entrySet = wordsCount.entrySet();
