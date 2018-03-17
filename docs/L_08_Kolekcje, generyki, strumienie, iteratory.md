@@ -105,8 +105,7 @@ Zbiory są rzeczy różnych. Włożenie drugiej takiej samej rzeczy nie spowoduj
 - mapy nie są ograniczone typami, zarówno indeksem jak i wartością może być cokolwiek - obiektem klasy, kolekcją, itd.;
     - `Map<String, Person>`
     - `Map<Person, List<Person>>`
-    - istotne jest tylko to, żeby funkcja heszująca `Perosn` działała sprawnie i zwracała różnej wartości;
--
+    - istotne jest tylko to, żeby funkcja heszująca `Person` działała sprawnie i zwracała różnej wartości;
 
 ---
 
@@ -145,7 +144,7 @@ Metodę template można też stworzyć:
 }
 
 Wywołanie:
-Integer b = Main.<Integer>min(1, 2);    // -> tutaj Main. bo metoda jest w klasie Main
+Integer b = Main1.<Integer>min(1, 2);   Main1in1
 ```
 
 ---
@@ -190,3 +189,62 @@ public interface ICalculator<T> {
     T calc(T a, T b);
 }
 ```
+
+---
+
+### Iteratory
+
+- `i` w pętli iterującej wywodzi się od Fortranu: tam zmienne i, j, k, l, m były z definicji integerami;
+
+Niby można iterować klasycznie: `for (int i = 0; i < 10; ++i)` ale to jednak nie wypada
+
+Dla wszystkich kolekcji:
+
+- >> efekt zmiany kolekcji po której iterujesz jest nieokreślony;
+
+- **pętla `for : `**
+    ```JAVA
+    collection <abc> col {
+        for (abc item : col) {
+            // jakiś kod;
+        }
+    }
+    ```
+    - tworzy itemy pod które podstawia kolekcje;
+    - **służy wyłącznie do odczytu kolekcji**;
+    - nie można zmodyfikować kolekcji, ona jest niezmienna;
+    - **dostaje się referencję do każdego elementu kolekcji**;
+    - ten item jest lokalną zmienną; to jak z funkcją: funkcja dostaje parametr który jest lokany, on coś robi z funkcją, ale oryginał funkcji jest niezmienny;
+
+
+**Iteratory po kolekcjach:**
+- są w każdym języku;
+- niby można tworzyć nową kolekcję na podstawie tej po której iterujemy (koszt niewielki, bo to jak wszystko jest współdzielone), ale po co?
+- więc są iteratory po kolekcjach, tak, żeby jedna można było modyfikować kolekcję po której iteruemy;
+
+```JAVA
+Collection<String> list = new ArrayList<>();
+
+    list.add("ala");
+    list.add("ma");
+    list.add("kota");
+    list.add("ada");
+    list.add("też");
+    list.add("chce");
+    list.add("kota");
+
+Iterator<String> it = list.iterator();
+```
+Tu jest iterator po Stringach, bo kolekcja jest stringów, to po czy innym iterować?
+
+Ten iterator jest silniejszy od tego z `for :`, bo wskazuje na kolejne elementy w kolekcji po której iterujemy;
+- na początku ustawia się przed 0 elementem kolekcji;
+```JAVA
+while (it.hasNext()) {
+    String s = it.next();`
+}
+```
+- w tym momencie zmienna String s jest tym po czym iterujemy;
+- iterowanie jest wbudowane w iterator a nie w kolekcję;
+- teraz można zrobić: `it.remove`;
+ -
