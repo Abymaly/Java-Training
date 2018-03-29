@@ -11,6 +11,12 @@ value [3] = 2
 Każda tablica jest obiektem. Nie jest zmienną generyczną!
 A ponieważ to jest obiekt, to się je tworzy przez `new`!
 
+### Tablice wielowymiarowe
+
+W javie nie ma pojęcia tablic dwu-, trzy-, wielowymiarowych.
+To są **tablice tablic**! (_array of arrays_)
+`TicTac[][]` to jest to samo co: `(TicTac[])[])`
+
 ### Instrukcje warunkowe
 Jak w każdym innym języku. Jeśli po warunku nie ma klamer, to instrukcją warunkową jest tylko pierwsza linijka. Ale nawet jeśli jest tylko jedna instrukcja to **zawsze** zawsze dawać ją w klamerki. Tak, żeby było wiadomo co autor miał na myśli, a nie, że się kopnął;
 
@@ -165,4 +171,10 @@ for (int i = 0; i < 10; ++i) {
     }
     //jakiś kod;
 };
+```
+### pętla for each
+
+```JAVA
+int a[10]
+    for (int item : a)
 ```
