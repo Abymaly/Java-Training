@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class Main {
+public class readingFile {
 
     public static void main(String[] args) {
 
@@ -29,8 +29,7 @@ public class Main {
         }
 
         String allLineStr = allLine.toString();
-        String allLineStrTxt = allLineStr.replaceAll(",", " ");
-        // TODO: usunąć . Ale przy użyciu metody remove() nie wczytuje wtedy w ogóle tekstu
+        String allLineStrTxt = allLineStr.replaceAll("\\.", " ");
         String[] allLineWord = allLineStrTxt.split(" ");
 
         Map<String, Integer> wordsCount = new HashMap<>();
@@ -43,7 +42,7 @@ public class Main {
                     wordsCount.put(oneWord, 1);
                 } else {
                     actCount = wordsCount.get(oneWord) + 1;
-                    wordsCount.put(oneWord, actCount);
+                     wordsCount.put(oneWord, actCount);
                 }
             }
         }
@@ -74,11 +73,11 @@ public class Main {
 
         Occurency winner = new Occurency();
 
-        Set<Map.Entry<String, Integer>> entrySet = wordsCount.entrySet();
+        Set<Map.Entry<String, Integer>> wordsSet = wordsCount.entrySet();
 
         Integer maxCount = 0;
 
-        for (Map.Entry<String, Integer> maxOcc : entrySet) {
+        for (Map.Entry<String, Integer> maxOcc : wordsSet) {
             if (maxOcc.getValue() > maxCount) {
                 maxCount = maxOcc.getValue();
                 winner.setName(maxOcc.getKey());
@@ -87,6 +86,5 @@ public class Main {
         }
 
         System.out.println(winner.getName() + " : " + winner.getOcc());
-
     }
 }
