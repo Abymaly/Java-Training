@@ -8,3 +8,8 @@
 2. Biblioteka Lombok:
 - znaleźć bibliotekę i plugin Lombok;
 - ogarnąć, zaimplementować;
+
+3. Kółko i krzyżyk, maszyna stanowa:
+- zmienić FSM, żeby działał pod KiK;
+- 4 stany: start, ruch 1 gracza, ruch 2 gracza, koniec (koniec -> wynik - > start);
+
