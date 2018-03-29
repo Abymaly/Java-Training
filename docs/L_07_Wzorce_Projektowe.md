@@ -149,9 +149,9 @@ Buildery służądo tworzenia jednego obiektu o różnych atrybutach.
 Wytwórnie są stargetowane na projektowanie różnych bytów.
 
 ```JAVA
-class Base;
-class B1 extends Base;
-class B2 extends Base;
+class Base ();
+    class B1 extends Base;
+    class B2 extends Base;
 
 // Base obj = new B1 /* albo, w zależności od jakiegoś parametru */ Base obj = new B2
 // Czyli można zrobić obiekt:
@@ -182,3 +182,24 @@ Podejście: _configuration over implementation_ - zróbmy wszystko co trzeba, po
 Rozdziela się kostrukcje od detali pliku (może być osobny plik .xml)
 
 _Maszyna Turinga_ - coś co potrafi liczyć i w trakcie liczenia podejmować decyzję na podstawie tego co policzyło. Nie jest maszyną stanów skończonych
+
+---
+
+### Singleton
+
+Wzorzec konstrukcyjny
+
+_Wzorowy antywzorzec_
+
+W c++ - antywzorzec: następca zmiennej globalnej wstawianej przez preprocesor;
+ 
+Singleton w całej aplikacji może być dokładnie jeden. 
+    - dokładnie jedna instancja klasy Singleton;
+    
+Można go skonstruować wyłącznie przez `.getInstance()`
+    - to jest odwołanie do statycznej metody klasy (to nie jest klasa obiektu, tylko metoda całej klasy);
+    - sam obiekt jest schowany na tye głęboko, żeby nikt się nie mógł do niego dostać;
+    - pierwszy `.getInstance()` gdzieś w czeluściach statycznego pola stworzy obiekt klasy Single, każde kolejne odwołanie się przez `.getInstance()` zwróci już istniejącą zmienną;
+
+Dostęp do wszystkich metod obiektu klasy Singleton jest przez `.getInstance()`: `Single.getInstance().doSth();`
+

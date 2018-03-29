@@ -150,3 +150,5 @@ public class Logowanie {
 - generalnie w Javie podstawową jeddnostką jest klasa;
 - AspectJ wprowadza nową jednstkę - aspekt;
     - aspekt opisuje zagadnienie które przecina więcej niż jedną klasę;
+
+---

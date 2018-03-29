@@ -96,3 +96,18 @@ try (f){
 ```
 Oznacza to na zakończenie, odpali się metoda close (był implement, więc ta metoda istnieje).
 Ochronie podlega obiekt f, który na koniec zostanie zamknięty.
+
+---
+
+### Obsługa błędów
+
+Wzorzec pokemon exception handling (_catch them all!_)
+
+>>If coś tam jest not null, a nie miało być null, to znaczy, że się zjebało i nie ma co sprawdzać.
+
+Nie ma co sprawdzać czy jest null (o ile to nie spodziewany null), to niech się wywali, rzuci wyjątkiem, uciekamy z tej sytuacji. Nie ma co łapać.
+- jak jest błąd przetwarzania, to zwykle znaczy, że dane są złe, nie ma co z tym się szarpać;
+- jest adnotacja @Not Null, nie ma co jej używać;
+
+
+
