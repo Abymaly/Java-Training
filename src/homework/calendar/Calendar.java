@@ -44,7 +44,8 @@ public class Calendar {
         System.out.println(Month.of(actMonth).toString() + "   " + actYear);
 
         for (int i = 0; i != calendar[0].length; ++i) {
-            System.out.print("  " + DayOfWeek.of((calendar[0][i])).toString() + "  ");
+            //System.out.print("  " + DayOfWeek.of((calendar[0][i])).toString() + "  ");
+            System.out.format("%11s", DayOfWeek.of((calendar[0][i])).toString());
         }
         System.out.println("\n-------------------------------------------------------------------------------");
 
