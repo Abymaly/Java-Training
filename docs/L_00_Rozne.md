@@ -76,3 +76,58 @@ Deklaracja funkcji ze zmiennną liczbą argumentów:
 
 ---
 Język domenowy - język opisu domeny opisujący to na czym się będzie pracowało;
+
+---
+
+**Zamiana zmiennych na trzy sposoby:**
+
+```JAVA
+public class Swapper {
+    private int x;
+    private int y;
+
+    void swap1() {
+        int z = y;
+        y = x;
+        x = z;
+    }
+
+    void swap2(){
+        x = x + y;
+        y = x - y;
+        x = x - y;
+    }
+
+    void swap3() {      // ^ -> alternatywa wykluczająca;
+        x ^= y;
+        y ^= x;
+        x ^= y;
+    }
+}
+```
+
+### Double braces initialization
+
+To jest niuans między tworzeniem listy i inicjowaniem jej jakimiś wartościami, a tworzeniem klasy anonimowej interfejsującej się do listy i zainicjowanej wartościami w ramach bloku inicującego.
+
+Nic specjalnie ważnego, ale fajne i ładnie wygląda ;)
+
+```JAVA
+void approach01() {
+    List<String> places = new ArrayList<>();
+    places.add("Buenos Aires");
+    places.add("Cordoba");
+    places.add("La Plata");
+}
+```
+
+```JAVA
+void approach02() {             // to jest deklaracja klasy anonimowej (patrz Lambda), interfejsujący się do listy
+    List <String> places = new ArrayList<String>() {
+    {                       // fragment w klamrach to blok inicjujący; to jest klasa zainicjowana trzema wartościami. One są wbite do klasy
+        add("Buenos Aires");
+        add("Cordoba");
+        add("La Plata");
+    }
+};
+```

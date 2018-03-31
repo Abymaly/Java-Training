@@ -158,3 +158,17 @@ doczytać:
 - porównywanie przez hash;
 - notifikacja;
 - refleksja;
+
+---
+
+###Obiekty immutable
+- po stworzneiu nie można ich zmienić;
+- mają konstruktor;
+- mają gettery;
+- nie mają setterów;
+- nie mają publicznie dostępnych atrybutów;
+- dobrze jeśli wszystkie atrybuty są `final`;
+
+Hasła nie przechowywać nigdy w obiektach immutable:
+- nie da się usunąć starego z pamięci - wyrzuci je dopiero garbage collector;
+- hasła przechowujemy tylko jako tablicę charów;
