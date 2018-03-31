@@ -1,6 +1,6 @@
 package homework;
 
-import homework.homework02.*;
+import homework.delegate_pattern.*;
 
 public class Main {
 
