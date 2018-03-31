@@ -28,7 +28,8 @@ Cały mechanizm bazuje na tym, że jest niezbywalna spójność danych (_consist
 Co się stanie jeśli dwa wątki usiłują dostać się do tego samego obiektu jednocześnie?
 - w javie nie ma zmiennych globalnych, więc odpada pytanie o widoczność zmiennych globalnych przez wątki;
 
-- `synchronized`: blokada fragmentów kodu:
+- `synchronized`:
+    - blokada fragmentów kodu:
     - _critical section_ - synchronizowane fragmenty kodu;
     - synchronizowane mogą być: metody, zmienne, obiekty;
     - jeśli jeden wątek zacznie wykonywać taki fragment kodu to inny wątek nie ma do niej dostępu;
@@ -36,16 +37,17 @@ Co się stanie jeśli dwa wątki usiłują dostać się do tego samego obiektu j
     - najprostszy, zwykle niezły sposób unikania konfliktów;
 - zmienne niesynchronizowane mogą zostać zmienione przez każdy z wątków, nie wiadomo w jakiej kolejności się do niej dopchają;
 
-- `join` - wątek czeka aż inne wątki skończą:
+- `join`:
+    - wątek czeka aż inne wątki skończą:
     - wątek drukujący zawartość tablicy czeka aż wątki sortujące tablicę skończą;
 
-- `interrupt`
+- `interrupt`:
     - mechanizm komunikacji międzywątkowej;
     - wykorzystanie `try()` / `catch()`;
     - jeden wątek przerywa drugi wątek przy pomocy pustego `catch` - przerywa się fragment `try`, na catch nic się nie dzieje, a wątek dalej się wykonuje;
     - wątek przerywający dalej sobie leci;
 
-- `notifyAll()`
+- `notifyAll()`:
     - obudź wszystkie wątki, przekaż im flagę, wątki sprawdzają czy to ich flaga, jeśli tak to działają, jeśli nie to czekają dalej;
     - sprawdzenie czy ta flaga powinna obudzić dany wątek tylko poprzez pętlę `while`;
     - w zależności od tego czy flagA jest `true` czy `false` uruchomi się któryś z wątków;
@@ -89,12 +91,7 @@ Co się stanie jeśli dwa wątki usiłują dostać się do tego samego obiektu j
 - wątki nie są blokowane, po prostu są zbyt zajęte odpowiadaniem sobie nawzajem żeby wznowić pracę;
 - dwa autorespondery które odpowiadają sobie nawzajem;
 
-
-yverb
-yy
-byer
-ybyb
-by
-eryb
-erby
-yer
+**Obiekty immutable są niezmienne, więc nic ich nie rusza**
+- to jest powód, dla którego w javie obiektów immutable jest tak dużo;
+- im wielowątkowość wisi - ich i tak nic nie zmieni;
+- z nimi nie ma co się bawić w synchronizację;
