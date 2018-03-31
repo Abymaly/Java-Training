@@ -88,3 +88,13 @@ Co się stanie jeśli dwa wątki usiłują dostać się do tego samego obiektu j
 - wątek działa w odpowiedzi na działanie innego wątku, który działa w odpowiedzi na inny wątek;
 - wątki nie są blokowane, po prostu są zbyt zajęte odpowiadaniem sobie nawzajem żeby wznowić pracę;
 - dwa autorespondery które odpowiadają sobie nawzajem;
+
+
+yverb
+yy
+byer
+ybyb
+by
+eryb
+erby
+yer
