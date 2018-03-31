@@ -13,3 +13,7 @@
 - zmienić FSM, żeby działał pod KiK;
 - 4 stany: start, ruch 1 gracza, ruch 2 gracza, koniec (koniec -> wynik - > start);
 
+4. Sortowanie:
+- jakaś kolekcja z liczbami;
+- bez używania sorta wyszukać drugi największy element;
+- sortowanie ma złożoność logarytmiczną, więc niech szuka maksymalnie szybko;
