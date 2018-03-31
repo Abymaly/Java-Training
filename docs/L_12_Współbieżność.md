@@ -1,3 +1,14 @@
+[Tu czytać.](https://docs.oracle.com/javase/tutorial/essential/concurrency/)
+
+---
+
+### Współbieżność
+
+Przetwarzanie w systemie współbieżnym - wykonywanie instrukcji różnych procesów.
+    - każda akcja -> zmiana stanu procesu;
+
+---
+
 ### Wielowątkowość
 
 Wątki pozwalają na symultaniczne wykonywanie pewnych operacji.
@@ -25,6 +36,8 @@ Cały mechanizm bazuje na tym, że jest niezbywalna spójność danych (_consist
 - to w zasadzie jest wymaganie niefunkcjonalne, więc we współczesnym programowaniu można z niego zrezygnować;
 - ale _consistency_ jest ważne, chociaż da się z niej zrezygnować;
 
+---
+
 Co się stanie jeśli dwa wątki usiłują dostać się do tego samego obiektu jednocześnie?
 - w javie nie ma zmiennych globalnych, więc odpada pytanie o widoczność zmiennych globalnych przez wątki;
 
@@ -35,7 +48,7 @@ Co się stanie jeśli dwa wątki usiłują dostać się do tego samego obiektu j
     - jeśli jeden wątek zacznie wykonywać taki fragment kodu to inny wątek nie ma do niej dostępu;
     - jak długo jeden wątek wykonuje metodę zsynchronizowaną, tak długo inne będą czekać w kolejce;
     - najprostszy, zwykle niezły sposób unikania konfliktów;
-- zmienne niesynchronizowane mogą zostać zmienione przez każdy z wątków, nie wiadomo w jakiej kolejności się do niej dopchają;
+    - zmienne niesynchronizowane mogą zostać zmienione przez każdy z wątków, nie wiadomo w jakiej kolejności się do niej dopchają;
 
 - `join`:
     - wątek czeka aż inne wątki skończą:
@@ -68,28 +81,40 @@ Co się stanie jeśli dwa wątki usiłują dostać się do tego samego obiektu j
         notifyAll();
 ```
 
+- `tryLock()`:
+    - jeśli coś jest zalockowane, to żaden inny wątek nie wykona unlock - moduł jest zsynchronizowany, żaden inny wątek nie ma do niego wjazdu, więc nie wykona unclocka;
+    - unlock robimy w finally;
+    - trochę jak try catch z zasobami;
+    - doczytać;
+
+
 **Ostrożnie z kolekcjami w aplikacjach wielowątkowych!**
 - kolekcje nie są synchronizowane;
 - każda kolekcja posiada opcję synchronizowania pojedynczych (atomowych) działań, ale nie ma opcji synchroniowania całej kolekcji;
 
-**Zakleszczenie / blokada wzajemna [_deadlock_]**:
 >> Finito, zakleszczyło się na śmierć i nie ma
+
+
+**Zakleszczenie / blokada wzajemna [_deadlock_]**:
 - sytuacja w której co najmniej dwie różne akcje czekają na siebie nawzajem, więc żadna nie może się skończyć;
 - dwóch sąsiadów poszło do siebie nawzajem i każdy czeka aż drugi wróci;
 - `reentrant synchronization` - jeśli jakiś kawałek kodu jest zablokowany (czyli zsynchroniozwany), to wątek który w nim jet moe go wykonać ponownie - blokada dotyczy tylko innych wątków; więc nie można napisać programu jednowątkowego, który się zakleszczy;
 - _problem ucztujących filozofów_;
 - zapobieganie, unikanie lub rozwiązywanie - ogarnąć;
 
+
 **Zagłodzenie [_starvation_]**:
 - brak zasobów;
 - kiedy w systemie są wątki które zużywają dużo zasobów i wątki o niższym priorytecie nie mogą się dopchać;
 - jeden wątek często woła obiekt, inne wątki wymagające zsynchronizowanego dostępu do tego samego obiektu będą blokowane;
+
 
 **[_livelock_]**:
 - niby wszystko dobrze, ale nie działa;
 - wątek działa w odpowiedzi na działanie innego wątku, który działa w odpowiedzi na inny wątek;
 - wątki nie są blokowane, po prostu są zbyt zajęte odpowiadaniem sobie nawzajem żeby wznowić pracę;
 - dwa autorespondery które odpowiadają sobie nawzajem;
+
 
 **Obiekty immutable są niezmienne, więc nic ich nie rusza**
 - to jest powód, dla którego w javie obiektów immutable jest tak dużo;
