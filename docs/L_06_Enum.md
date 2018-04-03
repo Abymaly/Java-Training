@@ -1,6 +1,4 @@
-
-
-Enum - typ wyliczeniowy, która ma tyle zmiennych ile wypiszemy. Enumy wielkimi, podkreślnik zamiast spacji;
+**Enum** - typ wyliczeniowy, która ma tyle zmiennych ile zadeklarujemy i zdefiniujemy.
 
 ```JAVA
 enum XO {TIC, TAC, EMPTY};
@@ -43,16 +41,22 @@ enum XO {
 ```
 
 Co więcej - może być enum w enumie. Bo czemu nie?
-Enum można zrobić w osobnej klasie typu enum. Czy używać - jak zwykle, to zależy. To jest pole do nadużyć ale można. Bo można też zadeklarować enum w innej klasie.
 
-Jeśli wykorzystujemy enuma w innej klasie to on już jest stworzony (**to jest singleton**). Nie trzeba robić new, on już istnieje! Dlaczego - będzie później, na razie ostrożnie z tym.
+Enum można zadeklarować w osobnej klasie typu enum
+- czy używać - jak zwykle, to zależy;
+- to jest pole do nadużyć ale można;
+- jeśli wykorzystujemy enuma w innej klasie to on już jest stworzony -> **to jest singleton**
+        - nie trzeba robić new, on już istnieje! 
+        - dlaczego - będzie później, na razie ostrożnie z tym;
 
-Forlamnie można zrobić setter, w sensie IDE nie zaprotestuje. Ale enum jest stały, dodawanie settera jest zaprzeczeniem stałości.
+Forlamnie można zrobić setter, w sensie IDE nie zaprotestuje. Ale **enum jest stały, dodawanie settera jest zaprzeczeniem stałości**.
 Po to mamy enuma żeby mieć stałe.
+
 > Jeśli robisz setter w enumie, to znaczy, że się pogubiłeś w życiu. Jedni biorą kokainę, inni robią setter w enumie.
 
+---
 
--------------------------------------
-
-Konwencja w enumie: tylko wielkie litery bez spacji;
-To koncepcja zaporzyczona z C, że zmienne niezmienne zapisujemy wielkimi. Zostało tylko w enumie;
+Konwencja w enumie: 
+- tylko wielkie litery;
+- podkreślniki zamiast spacji;
+- to koncepcja zapożyczona z C, że zmienne niezmienne zapisujemy wielkimi. Zostało tylko w enumie;
