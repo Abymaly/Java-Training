@@ -92,8 +92,11 @@ Co się stanie jeśli dwa wątki usiłują dostać się do tego samego obiektu j
 - kolekcje nie są synchronizowane;
 - każda kolekcja posiada opcję synchronizowania pojedynczych (atomowych) działań, ale nie ma opcji synchroniowania całej kolekcji;
 
+---
+
 >> Finito, zakleszczyło się na śmierć i nie ma
 
+Miejsca do popełniania błedów - w sumie wszędzie.
 
 **Zakleszczenie / blokada wzajemna [_deadlock_]**:
 - sytuacja w której co najmniej dwie różne akcje czekają na siebie nawzajem, więc żadna nie może się skończyć;
@@ -102,12 +105,10 @@ Co się stanie jeśli dwa wątki usiłują dostać się do tego samego obiektu j
 - _problem ucztujących filozofów_;
 - zapobieganie, unikanie lub rozwiązywanie - ogarnąć;
 
-
 **Zagłodzenie [_starvation_]**:
 - brak zasobów;
 - kiedy w systemie są wątki które zużywają dużo zasobów i wątki o niższym priorytecie nie mogą się dopchać;
 - jeden wątek często woła obiekt, inne wątki wymagające zsynchronizowanego dostępu do tego samego obiektu będą blokowane;
-
 
 **[_livelock_]**:
 - niby wszystko dobrze, ale nie działa;
@@ -115,6 +116,7 @@ Co się stanie jeśli dwa wątki usiłują dostać się do tego samego obiektu j
 - wątki nie są blokowane, po prostu są zbyt zajęte odpowiadaniem sobie nawzajem żeby wznowić pracę;
 - dwa autorespondery które odpowiadają sobie nawzajem;
 
+---
 
 **Obiekty immutable są niezmienne, więc nic ich nie rusza**
 - to jest powód, dla którego w javie obiektów immutable jest tak dużo;
