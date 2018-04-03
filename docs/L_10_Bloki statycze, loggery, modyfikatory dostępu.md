@@ -1,8 +1,12 @@
+**Wszystko co jest static należy do klasy, wszystko co nie jest static należy do każdego obiektu klasy.**
+
+---
+
 ### Bloki statyczne i inicjalizujące
 
 `int q1` - deklaracja zmiennej;
 
-`int q2 = 100` - to jest deklaracja i definicja zmiennej z kawałkiem run time;
+`int q2 = 100` - to jest deklaracja i definicja zmiennej z kawałkiem _run time_;
 
 
 Tak się nie wykona:
@@ -29,7 +33,7 @@ public class TestClass {
     }
 }
 ```
-Żeby się wykonało, to co ma się wykonać przed konstruktorem trzeba wziąć w klamerki. To się nazywa blok inicjalizujący.
+Żeby się wykonało, to co ma się wykonać przed konstruktorem trzeba wziąć w klamerki. To się nazywa **blok inicjalizujący**.
 
 **Blok statyczny:**
 - należy do klasy;
@@ -42,8 +46,6 @@ public class TestClass {
 - wykona się przed konstruktorem:
     - konstruktor nadklasy -> blok inicjalizujący podklasy -> konstruktor podklasy;
 
-**Wszystko co jest static należy do klasy, wszystko co nie jest static należy do każdego obiektu klasy.**
-
 ---
 
 ### Modyfikatory dostępu
@@ -52,9 +54,9 @@ public class TestClass {
 
 Modyfikatory dostępu - słowa kluczowe które mają wpływ na widoczność elementu ktre poprzedzają.
 
-Zmienne nie powinny być publiczne. Używamy protected i private, udostępniamy getterami i setterami
+Zmienne nie powinny być publiczne. Używamy protected i private, udostępniamy getterami i setterami.
 
->> Public jest jak dom publiczny, każdy może skorzystać
+> Public jest jak dom publiczny, każdy może skorzystać.
 
 - _Public_ - każdy;
 - _Protected_ - obiekt, obiekty klas potomnych i wszystkie klasy w pakiecie;
@@ -81,7 +83,7 @@ Zmienne nie powinny być publiczne. Używamy protected i private, udostępniamy 
 - wykorzystanie `System.out` do sprawdzenia aktualnej wartości zmiennych i stanu w którym znajduje się aplikacja jest bez sensu;
 - sprawę rozwiązano loggerami.
 
-Logi - do szeroko rozumianego przepływu informacji.
+Logi [`logger`] - do szeroko rozumianego przepływu informacji.
 - do zapisu aktualnej wartości poszczególnych zmiennych i obiektów;
 - do komunikatów o błędach;
 - do informacji o zdarzeniach mających miejsce w trakcie działania aplikacji;
@@ -89,19 +91,20 @@ Logi - do szeroko rozumianego przepływu informacji.
 `Logger` - posiada metody, które tworzą logi i nadają im odpowiedni priorytet:
 - nie są prostackie same w sobie;
 - troche jak view w VMC;
-- o ile biblioteki Javy są napisane dobrze, to loggery są napisane jeszcze lepiej; są mega stabilne -> w testach nawet nie trzeba sprawdzać czy logger przechodzi, logger przechodzi zawsze;
+- o ile biblioteki Javy są napisane dobrze, to loggery są napisane jeszcze lepiej; 
+    - są mega stabilne -> w testach nawet nie trzeba sprawdzać czy logger przechodzi, logger przechodzi zawsze;
 
 Loggery mają priorytety (poziomy logowania). W różnych wariantach, zwykle są:
-- FATAL
-- ERROR
-- WARN
-- INFO
-- DEBUG
-- TRACE
-- ALL / OFF
-- w niektórych bibliotekach (Log4J) można definiować własne poziomy
+- FATAL;
+- ERROR;
+- WARN;
+- INFO;
+- DEBUG;
+- TRACE;
+- ALL / OFF;
+- w niektórych bibliotekach (Log4J) można definiować własne poziomy;
 
-Loguje wybrany poziom i wszystkie wzwyż.
+Loguje się wybrany poziom i wszystkie wzwyż.
 
 ```JAVA
 import org.junit.Test;
@@ -150,5 +153,3 @@ public class Logowanie {
 - generalnie w Javie podstawową jeddnostką jest klasa;
 - AspectJ wprowadza nową jednstkę - aspekt;
     - aspekt opisuje zagadnienie które przecina więcej niż jedną klasę;
-
----
