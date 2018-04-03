@@ -32,7 +32,9 @@ public class CalendarNew {
         }
         sbLine.append("\n");
 
-        System.out.print(sbLine.toString());
+        String nextLine = sbLine.toString();
+
+        System.out.print(nextLine);
 
         LocalDate daysOfMonth = todayDate.minusDays(actDay - 1);
 
@@ -49,10 +51,10 @@ public class CalendarNew {
                 System.out.format("%11s", daysOfMonth.getDayOfMonth());
             }
             if (daysOfMonth.getDayOfWeek().getValue() % dayOfWeek.length == 0) {
-                System.out.print(sbLine.toString());
+                System.out.print(nextLine);
             }
             daysOfMonth = daysOfMonth.plusDays(1);
         }
-        System.out.print(sbLine.toString());
+        System.out.print(nextLine);
     }
 }
