@@ -16,6 +16,7 @@ switch (xo) {
 }
 ```
 
+
 **Każdy enum to jest klasa!**
 
 Każdy zmienna typu enum ma swoje metody.
@@ -46,8 +47,8 @@ Enum można zadeklarować w osobnej klasie typu enum
 - czy używać - jak zwykle, to zależy;
 - to jest pole do nadużyć ale można;
 - jeśli wykorzystujemy enuma w innej klasie to on już jest stworzony -> **to jest singleton**
-        - nie trzeba robić new, on już istnieje! 
-        - dlaczego - będzie później, na razie ostrożnie z tym;
+    + nie trzeba robić new, on już istnieje! 
+    + dlaczego - będzie później, na razie ostrożnie z tym;
 
 Forlamnie można zrobić setter, w sensie IDE nie zaprotestuje. Ale **enum jest stały, dodawanie settera jest zaprzeczeniem stałości**.
 Po to mamy enuma żeby mieć stałe.
