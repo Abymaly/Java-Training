@@ -4,8 +4,8 @@
 
 ### Współbieżność
 
-Przetwarzanie w systemie współbieżnym - wykonywanie instrukcji różnych procesów.
-    - każda akcja -> zmiana stanu procesu;
+Przetwarzanie w systemie współbieżnym = wykonywanie instrukcji różnych procesów.
+- każda akcja -> zmiana stanu procesu;
 
 ---
 
@@ -14,10 +14,10 @@ Przetwarzanie w systemie współbieżnym - wykonywanie instrukcji różnych proc
 Wątki pozwalają na symultaniczne wykonywanie pewnych operacji.
 
 Miejsca wielowątkowe -> _hazard_:
-    - jest bardzo wiele miejsc gdzie może coś pójść nie tak;
-    - żadne narzędzie nie pokaże gdzie coś może pójść nie tak;
-    - wątki za każdym razem mogą wykonać sięw różnej kolejności;
-    - generalnie jest to trudne;
+- jest bardzo wiele miejsc gdzie może coś pójść nie tak;
+- żadne narzędzie nie pokaże gdzie coś może pójść nie tak;
+- wątki za każdym razem mogą wykonać sięw różnej kolejności;
+- generalnie jest to trudne;
 
 Zastosowanie wątków:
 - ma sens nawet, jeśli procesor jest jednordzeniowy;
