@@ -1,6 +1,4 @@
-Będzie o markdown:  
-
-Markdown (tak samo) Ascii Doc służy do rozdzielenia warstwy treści od prezentacji;  
+Markdown, Ascii Doc:
 - służą do rozdzielenia warstwy treści od prezentacji;
 
 # nagłówek 
@@ -28,6 +26,7 @@ ujęte w "*" *będzie italic*
 
 > to jest cytat
 >> a to jest cytat drugiego poziomu  
+
 żeby wyjść z trybu cytowania pusta linia
 
 ---
@@ -45,7 +44,7 @@ tabele są fajne
 
 ---
 
-A [tutaj](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) jest cheat sheet. Jak czegoś tu nie ma, to nie istnieje
+A [tutaj](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) jest _CheatSheet_. Jak czegoś tu nie ma, to nie istnieje
 
 A to jest kotek:
 

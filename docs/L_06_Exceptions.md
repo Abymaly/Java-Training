@@ -1,12 +1,15 @@
 ### Wyjątki
-Wyjątki: coś się spieprzyło, nie działa, nie wiem co z tym zrobić, niech się ktoś tym zajmie.
+
+> Wyjątki: coś się spieprzyło, nie działa, nie wiem co z tym zrobić, niech się ktoś tym zajmie.
 
 **Takie bardzo silne go to z przekazaniem parametru i zamknięciem wszystkich klamer. Wielokrotny return**
 
 Wyjątki są w każdym współczesnym języku
 
 Zasady:
-- nie programować na wyjątkach!; obsługa wyjątków jest kosztowna (pod względem pamięci i czasu); wyjątki są od rozwiązywania sytuacji wyjątkowych nie obsługiwać flow programu wyjątkami;
+- **nie programować na wyjątkach!**;
+- obsługa wyjątków jest kosztowna (pod względem pamięci i czasu);
+- wyjątki są od rozwiązywania sytuacji wyjątkowych nie obsługiwać flow programu wyjątkami;
 - tam gdzie potrzeba, to używać - nie próbować obchodzić na siłę;
 - wyjątki pojawiają się wtedy, kiedy dane które trzeba obsłużyć nie pasują do wzorca;
 
@@ -47,11 +50,11 @@ catch (Exc2) {  //ten catch nie złapie poprzedniego throw
 ```
 
 Wyjątki są obiektami. Więc wyjątki mogą dziedziczyć.
-`Exc 11 extends Exc1`
+- `Exc2 extends Exc1`
 
 Rzucane wyjątki potomne (try) są obsługiwane też przez pułapki (catch) na tatusia. Kolejność jest ważna!
 
-Od miejsca zgłoszenia do miejsca wykonania wyjątku (czyli od throw do catch) nie wykonuję się nic!
+Od miejsca zgłoszenia do miejsca wykonania wyjątku (czyli od `throw` do `catch`) nie wykonuje się nic!
 
 ```java
 class Person ... {

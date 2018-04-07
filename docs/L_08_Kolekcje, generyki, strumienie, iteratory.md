@@ -1,4 +1,5 @@
 ### Operacje wejścia wyjścia
+
 Czytanie danych z czegokolwiek, niekoniecznie z dysku.
 
 Najprościej z dysku, klasa File:
@@ -45,21 +46,7 @@ Czytanie plików:
 
 Istrukcja try z zasobami `try() {}` -> pozwala na automatyczne zamykanie otwartych plików; są intrukcje wykonywane niezależnie od złapania wyjątków, bo jest wykonywany po całym chronionym bloku;
 
---------------------
-
-### Proces a wątek
-
-Proces dzieli się na wątki. Proces może uruchomić inny proces albo siebie ponownie.
-- procesy się nie komunikują;
-
-Wątek - sekwencja działań w obrębie procesu. Wątki mogą ale nie muszą mieć dostęp do jednej przestrzeni adresowej.
-- nie ma wsparcia na wielowątkowość na kartach graficznych;
-
-Wątki są lżejsze niż procesy i mogą się wspólnie komunikować tymi samymi obszarami pamięci.
-
-Jeszcze są najlżejsze formy: włókna. Niemal nieużywane. Tzw. lekkie wątki. Nie są wykonywane współbieżnie. Wiedzieć, że są.
-
------------------------------
+---
 
 ### Kolekcje
 

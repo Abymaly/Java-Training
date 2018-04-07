@@ -6,8 +6,8 @@ Języki funkcjonalne:
 
 Java nie jest do końca językiem funkcjonalnym
 
-W c++ były funkcje, lambdy i funktory
--funktor to klasa w której są przeciążone operatory;
+W c++ były funkcje, lambdy i funktory:
+- funktor to klasa w której są przeciążone operatory;
 
 W javie są funkcje i lambdy
 

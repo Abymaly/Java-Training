@@ -1,3 +1,17 @@
+### Kompozyt
+
+**Wzorczec strukturalny**, czyli mówiący jak ma wyglądać organizacja klas i obiektów; sprawia, że kontruktor obiektów robić się bardzo długi i złożony;
+
+Jest to sprzeczne z koncepcją, że funkcja nie powinna mieć więcej niż 3 argumenty (no, może czasem przejdą 4). Inaczej testowalność idzie się gonić.
+
+Kompozyt vs dziedziczenie:
+* _is a_ -> dziedziczenie (pies jest zwierzęciem;
+* _has a_ ->  kompozyt (pies ma zachowanie skakanie);
+
+> Jeśli kompozycja przerasta zdrowy rozsądek, to należy należy zdekomponować kompozycję do podkompyzji i skomponować od nowa.
+
+---
+
 ### Builder Pattern
 
 **Wzorzec kreacyjny do tworzenia obiektów.**
@@ -202,4 +216,3 @@ Można go skonstruować wyłącznie przez `.getInstance()`
     - pierwszy `.getInstance()` gdzieś w czeluściach statycznego pola stworzy obiekt klasy Single, każde kolejne odwołanie się przez `.getInstance()` zwróci już istniejącą zmienną;
 
 Dostęp do wszystkich metod obiektu klasy Singleton jest przez `.getInstance()`: `Single.getInstance().doSth();`
-

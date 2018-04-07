@@ -1,6 +1,25 @@
-### Typy zmiennych
-
 > Generalnie programy powinny się kompilować.
+
+_EDIT:_
+>> Generalnie programy powinny się kompilować i co do zasady powinny się kończyć, ale w zasadzie niekoniecznie.
+
+### Typy danych
+
+Java jest językiem z silnym typowaniem danych. Każda zmienna musi mieć zadeklarowany typ danych.
+
+Typy danych:
+- do liczb całkowitych
+    - `int`, `long`, `short`, `byte`;
+    - w żadnym nie ma wersji `unsgined`;
+    - c++ zmienia zakres inta w zależności od procesora, w javiezakres inta jest stały;
+- do liczb rzeczywistych
+- do wyrażeń logicznych
+- do znaków w Unicode:
+    - `char`;
+
+---
+
+### Typy zmiennych
 
 Klasa – zestaw danych i metod do operowania na nich
 
@@ -87,7 +106,9 @@ if (x == y) {
 Nie zadziałało, bo na heap powstały dwie zapakowane (boxing) zmienne, których zawartość jet sobie równa, ale przez _==_ przekazujemy referencję a nie wartość.
 
 ---
+
 ### immutable vs mutable
+
 `final int value = 3`
 
 ```JAVA
@@ -106,11 +127,13 @@ Person orgPerson = new Person("Jan", "Kowalski", 123);
 Person nextPerson = new Person(orgPerson.getName(), orgPerson.getSurName(), 456);
 ```
 
-Stary obiekt, nigdzie nieużywany zostanie w końcu sprzątnięty przez garbage collector. Tworzyć nowe obiekty, nie przejmować się starymi.
+Stary obiekt, nigdzie nieużywany zostanie w końcu sprzątnięty przez _garbage collector_. Tworzyć nowe obiekty, nie przejmować się starymi.
 
-Zamiast getterów można tworzyć metody, które tworzą nowe obiekty na podstawie starych obiektów. Refleksja pozwala zawiesić na chwilę final i zmianić wartość. Można, ale posypie się cała optymalizacja. Nie robić.
+Zamiast getterów można tworzyć metody, które tworzą nowe obiekty na podstawie starych obiektów:
+- refleksja pozwala zawiesić na chwilę final i zmianić wartość. Można, ale posypie się cała optymalizacja. Nie robić.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
+
 ### .toString()
 Do zmiennych dziedzczących z klasy (obiektowych)
 To metoda dziedzicząca po klasie _Object_, więc na prostych zmiennych nie zadziała:
@@ -132,6 +155,7 @@ System.out.println(x.toString() + y.toString());
 ```
 
 ---
+
 ### Jak porównywać obiekty
 
 Dwa rodzaje porównań:
@@ -161,7 +185,7 @@ doczytać:
 
 ---
 
-###Obiekty immutable
+### Obiekty immutable
 - po stworzneiu nie można ich zmienić;
 - mają konstruktor;
 - mają gettery;

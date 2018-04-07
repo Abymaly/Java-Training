@@ -1,6 +1,7 @@
 ### Maven
 
 Maven jest sytemem do budowania projektów w Javie.
+
 Takich systemów jest więcej:
 - Maven (współczesny i aktualny), standard;
 - Ant, obecnie AntYczny;
@@ -13,6 +14,7 @@ Co robią:
 - pozbierali wszystkie biblioteki javy z całego świata i mają; za darmo;
 - jabyśmy chcieli kiedyś oderwać program od InteliiJ to właśnie przez coś takiego; zamienia na binaria .jar i można odpalić program gdzieś indziej;
 
+---
 
 ### Komunikacja z bazą danych
 
@@ -72,7 +74,7 @@ _hibernate.cfg.xml_
 - jeśli nie korzystamy z cache, to za każdym razem pobieramy dane z bazy danych, zawsze są aktualne, ale trzeba je pobierać, a to zmniejsza wydajność;
 - przy cache zapisujemy dane w pamięci podręcznej i na nich działamy, ale dane mogą się zmienić w międzyczasie;
 
-Hybaernate wprowadził dwa poziomy cachowania:
+`Hybaernate` wprowadził dwa poziomy cachowania:
 - dla każdego usera zapisuje się osobny cache - to jest cache pierwszego poziomu;
 - ale jeśli jeden użytkownik pobrał cache, to drugi już ma to jest cache drugiego poziomu;
 - różne dane można pobierać z różnego poziomu cachowania, albo w ogóle bez niego;

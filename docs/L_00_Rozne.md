@@ -131,3 +131,40 @@ void approach02() {             // to jest deklaracja klasy anonimowej (patrz La
     }
 };
 ```
+
+---
+
+> BigData to przetwarzanie danych większych niż się mieszczą w komputer.
+
+---
+
+### Złożoność obliczeniowa [O]
+
+Złożoność obliczeniowa to zajęty czas. Nie ma nic wspólnego ze zużyciem zasobów.
+
+Wyszukanie n-tego elementu:
+- w tablicy: O(n) -> trzeba przeiterować po n elementach;
+- w ArrayList: O(1) -> n-ty element jest tutaj, dostajemy się do niego od razu, czyli wykonujemy jedną czynność;
+
+Złożoność O(n) jest uznawana za znakomitą.
+
+Algorytmy sortowania mają zwykle złożoność O(n logn). To też jest akceptowalne.
+
+Jak się trafi O(n^2) to albo uciekać, albo zamknąć oczy i liczyć, że nikt nie zauważy. No, chyba, że się nie da.
+- taką złożoność ma na przykład pętla w pętli. To się zwykle da zrobić inaczej.
+
+O(n!) -> uciekać.
+
+O(NP) -> NP-zupełne. Oznacza to, że prawdopodobnie nie ma komputera silnego na tyle, żeby dało się go policzyć. Wtedy stosuje się algorytmy przybliżone. Tworzone z nadzieją, że przybliżone wyniki będą dość dobre. Zwykle się udaje.
+
+Nie ma algorytmu liczącego złożoność obliczeniową algorytmów
+> Patrzysz, widzisz, wiesz. Założenie jest takie, że jak piszesz program, to wiesz jak działa.
+
+---
+
+```JAVA
+void fun (String ... s) {
+}
+```
+
+oznacza, że funkcja fun przekazuje jako argumenty tablicę Stringów: `String [] s`
