@@ -1,0 +1,2 @@
+Połączyć wartość elemetnwu z którego spada najczęściej z liczbą spadnieć w jeden obiekt;
+Zoptymalizować - jeśli iterował, że spada z 1 do 4, to nie ma po co sprawdzać ile razy spada z 2 elementu;
