@@ -8,7 +8,7 @@ public class MostOften {
 
         boolean[] boolArr = new boolean[myArr.length - 1];
 
-        int count = 1;
+        int count = 0;
         int maxCount = 0;
         int winner = 0;
 
@@ -35,7 +35,7 @@ public class MostOften {
                 }
                 j++;
             }
-            count = 1;
+            count = 0;
         }
         System.out.println("Najczęściej spadnie z: " + winner);
         System.out.println("Spadnie " + maxCount + " razy");
