@@ -5,7 +5,7 @@ import java.util.Observable;
 
 public class Board extends Observable {
     private final int dim;
-    private TicTac [][] data;
+    private TicTac[][] data;
 
     public Board() {
         this.dim = 3;           // w zasadzie może być też dim = 3, ale jeśli kiedyś dojdzie parametr w konstruktorze to w przypadku this dalej będzie działać;
@@ -18,8 +18,8 @@ public class Board extends Observable {
             Arrays.fill(row, TicTac.EMPTY);     // tutaj jest użycie metody klasy Arrays: wypełniamy rząd tablicy
             setChanged();
             notifyObservers();
-            }
         }
+    }
 
     public int getDim() {
         return dim;
@@ -37,5 +37,17 @@ public class Board extends Observable {
         this.data[x][y] = val;
         setChanged();       // ifnormacja, że się zmieniłem
         notifyObservers();  // wysłanie informacji do widoku
-}
+    }
+
+    public boolean isMovePossible() {
+        for (int x = 0; x < dim; ++x) {
+            for (int y = 0; y < dim; ++y) {
+                if (getData(x, y) == TicTac.EMPTY) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
 }

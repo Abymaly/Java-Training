@@ -3,7 +3,7 @@ package homework.ticTacToe.model;
 public enum TicTac {
     TIC ("X"),
     TAC ("O"),
-    EMPTY ("A");
+    EMPTY (" ");
 
     private String mark;
 

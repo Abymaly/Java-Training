@@ -1,5 +1,6 @@
 package homework.ticTacToe.views;
 
+import homework.ticTacToe.Model;
 import homework.ticTacToe.model.Board;
 import homework.ticTacToe.model.TicTac;
 
@@ -32,10 +33,12 @@ public class ShowBoard implements Observer {
 
     @Override
     public void update(Observable observable /* kto przysłał */, Object o /* co przysłał */) {
-     //   if (!(observable instanceof Board)) {   // to jest zabezpieczenie przed tym czy od dobregu modelu przychodzą informacje
-      //      return;
-      //  }
+        //   if (!(observable instanceof Board)) {   // to jest zabezpieczenie przed tym czy od dobregu modelu przychodzą informacje
+        //      return;
+        //  }
         Board board = (Board) observable;   // to jest cast (rzut); wiemy, że observable tak naprawdę jest board
         show(board);                        // model wysyła informację, że coś się zmieniło, widok pobiera wszystkie dane i rysuje od nowa
     }
+
+
 }
